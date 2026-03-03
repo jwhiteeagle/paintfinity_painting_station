@@ -1,0 +1,15 @@
+/* Project value layer (tweakcn output goes here).
+   Keep token names from theme-contract. Change values only. */
+
+:root {
+  --primary: oklch(0.53 0.19 280);
+  --secondary: oklch(0.67 0.11 185);
+  --accent: oklch(0.73 0.15 75);
+  --radius: 1rem;
+}
+
+.dark {
+  --primary: oklch(0.71 0.13 278);
+  --secondary: oklch(0.74 0.11 183);
+  --accent: oklch(0.85 0.13 92);
+}

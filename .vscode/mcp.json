@@ -1,0 +1,19 @@
+{
+  "servers": {
+    "jake_mcp": {
+      "command": "npx",
+      "args": ["tsx", "F:/DEV_PROJECTS/JAKE_MCP/src/server-stdio.ts"],
+      "env": {
+        "JAKE_DRIVE_ROOT": "F:/",
+        "JAKE_REFERENCES_ROOT": "F:/DEV_REFERENCES",
+        "JAKE_PROJECTS_ROOT": "F:/DEV_PROJECTS",
+        "PORT": "3000",
+        "HOST": "127.0.0.1"
+      }
+    },
+    "shadcn": {
+      "command": "npx",
+      "args": ["shadcn@latest", "mcp"]
+    }
+  }
+}
