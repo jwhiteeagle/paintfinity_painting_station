@@ -19,7 +19,7 @@ export function AppShell({
 }: AppShellProps) {
   return (
     <div className={cn("min-h-screen bg-background text-foreground", className)}>
-      <div className="mx-auto flex min-h-screen w-full max-w-7xl flex-col px-4 sm:px-6 lg:px-8">
+      <div className="layout-shell">
         {header ? <header className="py-4">{header}</header> : null}
         <main className={cn("flex-1 py-6", mainClassName)}>{children}</main>
         {footer ? <footer className="py-6">{footer}</footer> : null}

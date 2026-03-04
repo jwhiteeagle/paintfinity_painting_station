@@ -1,11 +1,12 @@
 ---
-id: <project_slug>_project_readme
-uri: jake://project/<project_slug>/<project_slug>_project_readme
-title: <PROJECT_KEY>_PROJECT_README
-description: Project README for <project_slug>; runtime architecture, high level project touchpoints.
+id: bun-boilerplate
+uri: jake://mini-project/bun-boilerplate
+title: Bun Boilerplate
+description: Lightweight React + TypeScript + Tailwind v4 starter template for Jake's workflow.
+workflow_origin: bun-boilerplate
 ---
 
-last_updated: "03-02-26"
+last_updated: "03-04-26"
 
 ## Bun Boilerplate
 
@@ -13,15 +14,7 @@ This repo is the jump-off point for lightweight SPA/static projects.
 
 ## Project Details
 
-<details placeholder>
-
-## TODO
-
-### "Wrappers" that can easily be deleted if not needed, but are high signal for most projects and rely on base primitives
-
-- add theme switcher
-- add default footer or wrapper with high value items, keep lightweight
-- add small "watermark" text "made by chieflivegaming" or something as another wrapper
+This repository is the canonical lightweight starter for projects using `workflow_origin: bun-boilerplate`.
 
 ## Stack
 
@@ -38,20 +31,11 @@ This repo is the jump-off point for lightweight SPA/static projects.
 
 ### Shadcn Registries
 
-**cult-ui:** https://cult-ui.com/
-Curated, tastefully animated components built with Framer Motion — small set, high quality. Reach for this when you want unusual interaction patterns without the generic AI-demo look.
-
-**react-bits:** https://reactbits.dev/
-Animated, interactive components focused on backgrounds, text effects, and visual flair. Best source for texture, depth, and motion-driven identity elements (Layer 3-6 of the visual identity system).
-
-**motion-primitives:** https://motion-primitives.com/
-Motion behaviors and animation primitives that layer on top of your existing components. Use this to add scroll animations, transitions, and gesture responses without touching your token contract.
-
-**shadcnblocks:** https://www.shadcnblocks.com/
-Large library of free marketing-oriented blocks (heroes, pricing, FAQs, testimonials) built on Tailwind v4. Good for fast scaffolding when structure matters more than uniqueness.
-
-**pacekit:** https://ui.pacekit.dev/
-Production-ready blocks built specifically for real apps and dashboards. First stop when spinning up a personal tool or internal dashboard quickly.
+- `cult-ui`: https://cult-ui.com/
+- `react-bits`: https://reactbits.dev/
+- `motion-primitives`: https://motion-primitives.com/
+- `shadcnblocks`: https://www.shadcnblocks.com/
+- `pacekit`: https://ui.pacekit.dev/
 
 ## First Clone Setup (Delete This Block After You Run It Once)
 
@@ -122,21 +106,16 @@ bun run build
 
 9. Make your first project commit and push to Forgejo.
 
-## Canon Design Framing
+## Frontend Canon Reference
 
-This starter is built around five reusable patterns:
+Concept authority for frontend methodology lives in `jake://global/frontend-design`.
 
-1. `App Shell`
-2. `Page Header pattern`
-3. `Section patterns`
-4. `Card pattern variants`
-5. `Semantic action variants`
+Use this README for `bun-boilerplate` implementation details only.
 
 ## Repo Roles
 
 - `bun-boilerplate` = PoC + starter implementation.
 - `jake_component_registry` = cross-project reusable pattern distribution.
-- `frontend-design.md` = concept authority and anti-drift rules.
 
 ## V1 Constraints
 
@@ -179,7 +158,7 @@ Default mapping is included in `components.json`:
 ```json
 {
   "registries": {
-    "@jake": "http://forgejo.local/jake/jake_component_registry/raw/branch/main/public/r/{name}.json"
+    "@jake": "http://192.168.50.123:30142/forgejoadmin/jake_component_registry/raw/branch/main/public/r/{name}.json"
   }
 }
 ```
@@ -190,9 +169,7 @@ Install pattern items:
 bunx shadcn@latest add @jake/app-shell @jake/page-header @jake/section-container
 ```
 
-## Notes Dump
+## Reference-Up Notes
 
-- Harden patterns here first, then promote to `jake_component_registry`.
-- Prefer small, high-leverage reusable patterns over large one-off component catalogs.
-- If a rule is concept-level, store it in `frontend-design.md`; if implementation-level, store it here.
-- If project scope grows beyond lightweight SPA/static, move to a heavier framework starter and carry canon patterns forward.
+- Harden patterns in this repo first, then promote reusable patterns to `jake_component_registry`.
+- If lightweight defaults no longer fit project needs, use `jake://helper/framework-escalation`.

@@ -19,8 +19,8 @@ const widthClasses: Record<NonNullable<SectionContainerProps["width"]>, string> 
 
 const surfaceClasses: Record<NonNullable<SectionContainerProps["surface"]>, string> = {
   none: "",
-  subtle: "rounded-lg border border-border/60 bg-muted/30",
-  card: "rounded-xl border border-border bg-card shadow-sm",
+  subtle: "surface-subtle",
+  card: "surface-card",
 }
 
 export function SectionContainer({
@@ -34,10 +34,10 @@ export function SectionContainer({
   const Component = as
 
   return (
-    <Component className={cn("mx-auto w-full px-4 py-6 sm:px-6", widthClasses[width], className)}>
+    <Component className={cn("layout-section", widthClasses[width], className)}>
       <div
         className={cn(
-          "space-y-4",
+          "layout-stack-sm",
           surfaceClasses[surface],
           surface !== "none" && "p-5 sm:p-6",
           contentClassName

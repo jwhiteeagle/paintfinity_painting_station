@@ -24,7 +24,7 @@ export function PageHeader({
   const centered = align === "center"
 
   return (
-    <section className={cn("space-y-4", centered && "text-center", className)}>
+    <section className={cn("layout-stack-sm", centered && "text-center", className)}>
       <div
         className={cn(
           "flex gap-3",

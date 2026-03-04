@@ -35,7 +35,7 @@ export function ContentCard({
           <CardTitle>{title}</CardTitle>
         </CardHeader>
       ) : null}
-      <CardContent className={cn("text-sm text-muted-foreground", title ? "pt-0" : "pt-6", contentClassName)}>
+      <CardContent className={cn("type-body-sm", title ? "pt-0" : "pt-6", contentClassName)}>
         {children}
       </CardContent>
     </Card>
