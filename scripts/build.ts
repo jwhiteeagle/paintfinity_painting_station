@@ -2,6 +2,7 @@ import tailwindPlugin from "bun-plugin-tailwind"
 import { rm } from "node:fs/promises"
 
 const staticFiles = [
+  "CNAME",
   "robots.txt",
   "sitemap.xml",
   "site.webmanifest",

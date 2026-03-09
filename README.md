@@ -10,7 +10,7 @@ last_updated: "03-08-26"
 
 ## Paintfinity Painting Station
 
-This repository is the active Paintfinity workspace, initialized from `bun-boilerplate` and now moving into project-specific implementation.
+This repository is the active Paintfinity workspace, initialized from `bun-boilerplate` 
 
 ## Current Focus
 
@@ -25,28 +25,6 @@ This repository is the active Paintfinity workspace, initialized from `bun-boile
 - Tailwind v4
 - shadcn/ui primitives
 - `@jake` plus curated external registries in `components.json`
-
-## Common Commands
-
-```bash
-bun install
-```
-
-```bash
-bun run dev
-```
-
-```bash
-bun run typecheck
-```
-
-```bash
-bun run lint
-```
-
-```bash
-bun run build
-```
 
 ## Theme Workflow
 
@@ -79,17 +57,3 @@ This repo is configured to deploy from GitHub Actions using:
 Subdomain target for this project:
 
 - `paintfinity.chieflivegaming.com`
-
-## Public Launch Checklist
-
-Before first push to remote for deployment, confirm:
-
-1. In GitHub repo settings, set `Pages -> Source` to `GitHub Actions`.
-2. In `Pages`, set custom domain to `paintfinity.chieflivegaming.com` and enable HTTPS.
-3. In DNS, add `CNAME` record:
-   `paintfinity.chieflivegaming.com -> <github-account>.github.io`
-4. Replace remaining placeholder copy/content in the app before go-live.
-5. Verify no secrets are committed (`.env*` stays ignored).
-6. Track `bun.lock` in git for deterministic deploys.
-7. Keep CI installs frozen (`bun install --frozen-lockfile`) so dependency changes only land through committed lockfile updates.
-8. Enable Dependabot for weekly Bun and GitHub Actions update PRs.
