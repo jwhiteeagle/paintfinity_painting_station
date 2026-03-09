@@ -1,8 +1,8 @@
 node_modules/
 dist/
 .bun/
+.vscode/
 
-bun.lock
 package-lock.json
 
 *.log

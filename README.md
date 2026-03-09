@@ -1,96 +1,40 @@
 ---
-id: bun-boilerplate
-uri: jake://mini-project/bun-boilerplate
-title: Bun Boilerplate
-description: Lightweight React + TypeScript + Tailwind v4 starter template for Jake's workflow.
+id: paintfinity_painting_station_project_readme
+uri: jake://project/paintfinity_painting_station/paintfinity_painting_station_project_readme
+title: Paintfinity Painting Station
+description: Lightweight Bun React workspace for Paintfinity UI exploration and implementation.
 workflow_origin: bun-boilerplate
 ---
 
-last_updated: "03-04-26"
+last_updated: "03-08-26"
 
-## Bun Boilerplate
+## Paintfinity Painting Station
 
-This repo is the jump-off point for lightweight SPA/static projects.
+This repository is the active Paintfinity workspace, initialized from `bun-boilerplate` and now moving into project-specific implementation.
 
-## Project Details
+## Current Focus
 
-This repository is the canonical lightweight starter for projects using `workflow_origin: bun-boilerplate`.
+- Replace template-facing copy and structure with Paintfinity-facing UI slices.
+- Pressure-test the clone-to-implementation workflow and feed improvements back to the template source.
+- Keep this repo lightweight while core workflows are defined.
 
 ## Stack
 
 - React
 - TypeScript
 - Tailwind v4
-- Shadcn components
-- Some favorite registries preset in components.json
-- Local jake_component_registry in components.json
+- shadcn/ui primitives
+- `@jake` plus curated external registries in `components.json`
 
-## Bun
-
-`bun install`, `bun run dev`, `bun run build`, `bunx shadcn@latest add ...`, `bun run typecheck`, `bun run lint`
-
-### Shadcn Registries
-
-- `cult-ui`: https://cult-ui.com/
-- `react-bits`: https://reactbits.dev/
-- `motion-primitives`: https://motion-primitives.com/
-- `shadcnblocks`: https://www.shadcnblocks.com/
-- `pacekit`: https://ui.pacekit.dev/
-
-## First Clone Setup (Delete This Block After You Run It Once)
-
-Use this exact order when you clone this boilerplate into a new project:
-
-1. Clone and enter the new project directory.
-2. Repoint git to your new Forgejo repo (if needed):
-
-```bash
-git remote -v
-```
-
-```bash
-git remote remove origin
-```
-
-```bash
-git remote add origin <your-new-forgejo-repo-url>
-```
-
-3. Install deps:
+## Common Commands
 
 ```bash
 bun install
 ```
 
-4. Start dev server and verify app loads:
-
 ```bash
 bun run dev
 ```
-
-5. Apply project identity updates:
-
-- update `index.html` title
-- update app header copy in `src/App.tsx`
-- update this README for the actual project
-
-6. Apply project theme:
-
-- paste tweakcn value changes into `src/styles/theme-project.css`
-- keep token names stable in `theme-contract.css`
-- keep your custom extras in `theme-custom.css`
-
-7. Pull any extra primitives/patterns you need:
-
-```bash
-bunx shadcn@latest add button card
-```
-
-```bash
-bunx shadcn@latest add @jake/app-shell @jake/page-header @jake/section-container
-```
-
-8. Run quality gates:
 
 ```bash
 bun run typecheck
@@ -104,72 +48,48 @@ bun run lint
 bun run build
 ```
 
-9. Make your first project commit and push to Forgejo.
+## Theme Workflow
 
-## Frontend Canon Reference
+- Keep semantic token names stable in `src/styles/theme-contract.css`.
+- Put project value overrides in `src/styles/theme-project.css`.
+- Place reusable custom utilities and extras in `src/styles/theme-custom.css`.
 
-Concept authority for frontend methodology lives in `jake://global/frontend-design`.
+Import order is maintained in `src/index.css`: contract -> project -> custom.
 
-Use this README for `bun-boilerplate` implementation details only.
+## Registry Notes
 
-## Repo Roles
-
-- `bun-boilerplate` = PoC + starter implementation.
-- `jake_component_registry` = cross-project reusable pattern distribution.
-
-## V1 Constraints
-
-- Bun-first workflow.
-- No router by default.
-- Minimal dependencies.
-- shadcn-compatible semantic token contract.
-- tweakcn value-swap workflow.
-
-## Theme Workflow (tweakcn Bridge)
-
-Theme files are intentionally layered:
-
-- `src/styles/theme-contract.css` = required semantic token names (do not rename).
-- `src/styles/theme-project.css` = project value swaps (paste/adapt tweakcn values here).
-- `src/styles/theme-custom.css` = personal extras and reusable utilities.
-
-Import order is enforced in `src/index.css`:
-
-1. contract
-2. project values
-3. custom extras
-
-Rule: keep token names stable, change values per project.
-
-## shadcn Compatibility Notes
-
-- `components.json` is preconfigured for Tailwind CSS variables and aliases.
-- Starter includes `cn()` and baseline `ui/button` + `ui/card` primitives.
-- Add official primitives with:
+Install primitives or patterns as needed:
 
 ```bash
-bunx shadcn@latest add button
+bun run ui button card
 ```
-
-## Custom Registry Setup (`@jake`)
-
-Default mapping is included in `components.json`:
-
-```json
-{
-  "registries": {
-    "@jake": "http://192.168.50.123:30142/forgejoadmin/jake_component_registry/raw/branch/main/public/r/{name}.json"
-  }
-}
-```
-
-Install pattern items:
 
 ```bash
-bunx shadcn@latest add @jake/app-shell @jake/page-header @jake/section-container
+bun run ui @jake/app-shell @jake/page-header @jake/section-container
 ```
 
-## Reference-Up Notes
+## GitHub Pages Deployment
 
-- Harden patterns in this repo first, then promote reusable patterns to `jake_component_registry`.
-- If lightweight defaults no longer fit project needs, use `jake://helper/framework-escalation`.
+This repo is configured to deploy from GitHub Actions using:
+
+- `.github/workflows/deploy-pages.yml`
+- Bun build output from `dist/`
+- GitHub Pages artifact upload + deploy actions
+
+Subdomain target for this project:
+
+- `paintfinity.chieflivegaming.com`
+
+## Public Launch Checklist
+
+Before first push to remote for deployment, confirm:
+
+1. In GitHub repo settings, set `Pages -> Source` to `GitHub Actions`.
+2. In `Pages`, set custom domain to `paintfinity.chieflivegaming.com` and enable HTTPS.
+3. In DNS, add `CNAME` record:
+   `paintfinity.chieflivegaming.com -> <github-account>.github.io`
+4. Replace remaining placeholder copy/content in the app before go-live.
+5. Verify no secrets are committed (`.env*` stays ignored).
+6. Track `bun.lock` in git for deterministic deploys.
+7. Keep CI installs frozen (`bun install --frozen-lockfile`) so dependency changes only land through committed lockfile updates.
+8. Enable Dependabot for weekly Bun and GitHub Actions update PRs.

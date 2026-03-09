@@ -1,13 +1,14 @@
 {
-  "name": "bun-boilerplate",
+  "name": "paintfinity_painting_station",
   "private": true,
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "bun index.html",
+    "dev": "bun --port 3005 index.html",
     "build": "bun run ./scripts/build.ts",
     "typecheck": "bunx tsc --noEmit",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "ui": "bunx shadcn@latest add"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
@@ -25,7 +26,6 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
-    "shadcn": "^3.8.5",
     "tailwindcss": "^4.1.16",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.48.0"

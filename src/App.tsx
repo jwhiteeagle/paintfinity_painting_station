@@ -12,10 +12,10 @@ export default function App() {
         <div className="flex items-center justify-between gap-3">
           <div>
             <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
-              Bun Boilerplate
+              Paintfinity Painting Station
             </p>
             <p className="text-sm text-muted-foreground">
-              Lightweight SPA starter with canon pattern scaffolding.
+              UI workspace for station planning, prep flow, and execution rhythm.
             </p>
           </div>
           <ThemeToggle />
@@ -23,18 +23,18 @@ export default function App() {
       }
       footer={
         <p className="text-sm text-muted-foreground">
-          PoC starter + pattern baseline. Promote proven patterns to `@jake` registry.
+          Placeholder shell for Paintfinity operations. Replace content slices as features land.
         </p>
       }
     >
       <SectionContainer width="wide" surface="none">
         <PageHeader
-          title="Frontend Canon Starter"
-          description="App Shell, Page Header, Section patterns, Card variants, and semantic action variants are prewired."
+          title="Paintfinity Control Surface"
+          description="Coordinate painting sessions, track station readiness, and keep repeatable workflows visible."
           actions={
             <div className="flex flex-wrap gap-2">
-              <Button variant="main">Primary Action</Button>
-              <Button variant="secondary">Secondary</Button>
+              <Button variant="main">Start Session</Button>
+              <Button variant="secondary">View Queue</Button>
             </div>
           }
         />
@@ -42,17 +42,17 @@ export default function App() {
 
       <SectionContainer width="default" surface="subtle">
         <div className="grid gap-4 md:grid-cols-2">
-          <ContentCard variant="text" title="Section Pattern">
-            Shared spacing, width, and surface rhythm lives in reusable section primitives.
+          <ContentCard variant="text" title="Session Planning">
+            Outline upcoming painting sessions with owner, scope, and target completion window.
           </ContentCard>
-          <ContentCard variant="utility" title="Card Variants">
-            Reusable content surfaces cover common contexts without ad-hoc style drift.
+          <ContentCard variant="utility" title="Palette and Material Prep">
+            Track paints, brushes, and consumables so each session starts with complete kit coverage.
           </ContentCard>
-          <ContentCard variant="gallery" title="Semantic Actions">
-            Button variants encode action hierarchy. Keep action styling semantic, not one-off.
+          <ContentCard variant="gallery" title="Station Readiness">
+            Capture setup checks for lighting, workspace layout, and cleanup status before active work.
           </ContentCard>
-          <ContentCard variant="cta" title="tweakcn Bridge">
-            Keep token names stable, swap values per project, and layer custom extras safely.
+          <ContentCard variant="cta" title="Quality and Follow-Up">
+            Record post-session notes, blockers, and next actions to improve repeatability over time.
           </ContentCard>
         </div>
       </SectionContainer>
