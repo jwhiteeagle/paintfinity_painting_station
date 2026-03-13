@@ -11,7 +11,7 @@ type ThemeContextValue = {
 
 const ThemeContext = React.createContext<ThemeContextValue | null>(null)
 
-const STORAGE_KEY = "jake-theme"
+const STORAGE_KEY = "paintfinity-theme"
 
 function getSystemTheme(): ResolvedTheme {
   if (typeof window === "undefined") return "light"

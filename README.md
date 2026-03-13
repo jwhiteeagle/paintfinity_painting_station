@@ -1,16 +1,20 @@
 ---
-id: paintfinity_painting_station_project_readme
-uri: jake://project/paintfinity_painting_station/paintfinity_painting_station_project_readme
+id: paintfinity_project_readme
+uri: jake://project/paintfinity/paintfinity_project_readme
 title: Paintfinity Painting Station
 description: Lightweight Bun React workspace for Paintfinity UI exploration and implementation.
 workflow_origin: bun-boilerplate
 ---
 
-last_updated: "03-09-26"
+last_updated: "03-12-26"
 
 ## Paintfinity Painting Station
 
 This repository is the active Paintfinity workspace, initialized from `bun-boilerplate` 
+
+## Deployed at
+
+- `https://paintfinity.chieflivegaming.com/`
 
 ## Current Focus
 
