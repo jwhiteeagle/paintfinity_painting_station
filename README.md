@@ -6,21 +6,15 @@ description: Lightweight Bun React workspace for Paintfinity UI exploration and 
 workflow_origin: bun-boilerplate
 ---
 
-last_updated: "03-12-26"
+last_updated: "03-16-26"
 
 ## Paintfinity Painting Station
 
-This repository is the active Paintfinity workspace, initialized from `bun-boilerplate` 
+This repository is the active Paintfinity workspace, initialized from `bun-boilerplate`
 
 ## Deployed at
 
 - `https://paintfinity.chieflivegaming.com/`
-
-## Current Focus
-
-- Replace template-facing copy and structure with Paintfinity-facing UI slices.
-- Pressure-test the clone-to-implementation workflow and feed improvements back to the template source.
-- Keep this repo lightweight while core workflows are defined.
 
 ## Stack
 
@@ -28,15 +22,13 @@ This repository is the active Paintfinity workspace, initialized from `bun-boile
 - TypeScript
 - Tailwind v4
 - shadcn/ui primitives
-- `@jake` plus curated external registries in `components.json`
+- curated external registries in `components.json`
 
 ## Theme Workflow
 
-- Keep semantic token names stable in `src/styles/theme-contract.css`.
-- Put project value overrides in `src/styles/theme-project.css`.
-- Place reusable custom utilities and extras in `src/styles/theme-custom.css`.
+- Keep semantic token names, project theme values, and reusable custom utilities together in `src/index.css`.
 
-Import order is maintained in `src/index.css`: contract -> project -> custom.
+The file is organized with clear sections for theme tokens, the Tailwind semantic bridge, project utilities, and base styles.
 
 ## Registry Notes
 
@@ -46,17 +38,19 @@ Install primitives or patterns as needed:
 bun run ui button card
 ```
 
-```bash
-bun run ui @jake/app-shell @jake/page-header @jake/section-container
-```
-
 ## GitHub Pages Deployment
 
 This repo is configured to deploy from GitHub Actions using:
 
-- `.github/workflows/deploy-pages.yml`
+- `.github/workflows/deploy.yml`
 - Bun build output from `dist/`
 - GitHub Pages artifact upload + deploy actions
+
+Current automation touchpoints:
+
+- Pushes to `main` trigger the GitHub Pages deploy workflow.
+- Pull requests are validated by `pr-ci.yml` before merge.
+- Eligible Dependabot PRs can be auto-approved and auto-merged after passing CI.
 
 Subdomain target for this project:
 

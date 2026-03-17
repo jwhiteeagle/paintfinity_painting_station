@@ -7,6 +7,7 @@ export type SectionContainerProps = {
   as?: "section" | "div"
   width?: "narrow" | "default" | "wide"
   surface?: "none" | "subtle" | "card"
+  id?: string
   className?: string
   contentClassName?: string
 }
@@ -28,16 +29,17 @@ export function SectionContainer({
   as = "section",
   width = "default",
   surface = "none",
+  id,
   className,
   contentClassName,
 }: SectionContainerProps) {
   const Component = as
 
   return (
-    <Component className={cn("layout-section", widthClasses[width], className)}>
+    <Component id={id} className={cn("layout-section", widthClasses[width], className)}>
       <div
         className={cn(
-          "layout-stack-sm",
+          "stack-sm",
           surfaceClasses[surface],
           surface !== "none" && "p-5 sm:p-6",
           contentClassName
