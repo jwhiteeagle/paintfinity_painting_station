@@ -6,11 +6,11 @@ description: Lightweight Bun React workspace for Paintfinity UI exploration and 
 workflow_origin: bun-boilerplate
 ---
 
-last_updated: "03-16-26"
+last_updated: "03-23-26"
 
 ## Paintfinity Painting Station
 
-This repository is the active Paintfinity workspace, initialized from `bun-boilerplate`
+This repository is the active Paintfinity workspace.Scaffolded from local boilerplate repo `bun-boilerplate`
 
 ## Deployed at
 
@@ -24,19 +24,12 @@ This repository is the active Paintfinity workspace, initialized from `bun-boile
 - shadcn/ui primitives
 - curated external registries in `components.json`
 
-## Theme Workflow
+## Theme Workflow for my projects
 
-- Keep semantic token names, project theme values, and reusable custom utilities together in `src/index.css`.
-
-The file is organized with clear sections for theme tokens, the Tailwind semantic bridge, project utilities, and base styles.
-
-## Registry Notes
-
-Install primitives or patterns as needed:
-
-```bash
-bun run ui button card
-```
+- Single stylesheet (index.css) defines tokens and helper tailwind utilities utilize them.
+- Components use utilities for lightweight and portable builds across projects.
+- Theme values are swapped per project while the component-facing token contract stays stable.
+- This keeps styling compatible with shadcn primitives and other future shadcn intake from registries.
 
 ## GitHub Pages Deployment
 

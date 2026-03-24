@@ -32,10 +32,12 @@ export function ContentCard({
     <Card className={cn(variantClasses[variant], className)}>
       {title ? (
         <CardHeader>
-          <CardTitle>{title}</CardTitle>
+          <CardTitle className="type-title type-title-sm">{title}</CardTitle>
         </CardHeader>
       ) : null}
-      <CardContent className={cn("type-body-sm", title ? "pt-0" : "pt-6", contentClassName)}>
+      <CardContent
+        className={cn("type-copy-sm type-muted", title ? "pt-0" : "pt-6", contentClassName)}
+      >
         {children}
       </CardContent>
     </Card>

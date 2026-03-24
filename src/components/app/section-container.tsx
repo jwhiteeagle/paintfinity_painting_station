@@ -39,7 +39,7 @@ export function SectionContainer({
     <Component id={id} className={cn("layout-section", widthClasses[width], className)}>
       <div
         className={cn(
-          "stack-sm",
+          "stack-md",
           surfaceClasses[surface],
           surface !== "none" && "p-5 sm:p-6",
           contentClassName

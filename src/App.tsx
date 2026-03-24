@@ -125,7 +125,7 @@ export default function App() {
               title={item.title}
               contentClassName="space-y-4"
             >
-              <div className="aspect-[4/3] rounded-lg border border-dashed border-border/80 bg-muted/40" />
+              <div className="aspect-4/3 rounded-lg border border-dashed border-border/80 bg-muted/40" />
               <p>{item.description}</p>
               <div>
                 <a href={item.href} target="_blank" rel="noreferrer">

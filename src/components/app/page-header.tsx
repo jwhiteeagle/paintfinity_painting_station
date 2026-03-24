@@ -24,19 +24,19 @@ export function PageHeader({
   const centered = align === "center"
 
   return (
-    <section className={cn("stack-sm", centered && "text-center", className)}>
+    <section className={cn("stack-md", centered && "type-center", className)}>
       <div
         className={cn(
-          "flex gap-3",
+          "layout-cluster",
           centered
-            ? "flex-col items-center"
+            ? "flex-col justify-center"
             : "flex-col sm:flex-row sm:items-end sm:justify-between"
         )}
       >
-        <div className={cn("space-y-2", centered && "max-w-3xl")}> 
-          <h1 className={cn("type-title-display", titleClassName)}>{title}</h1>
+        <div className={cn("stack-sm", centered && "max-w-3xl")}>
+          <h1 className={cn("type-title type-title-lg", titleClassName)}>{title}</h1>
           {description ? (
-            <div className={cn("type-copy-muted", descriptionClassName)}>
+            <div className={cn("type-copy type-muted", descriptionClassName)}>
               {description}
             </div>
           ) : null}
