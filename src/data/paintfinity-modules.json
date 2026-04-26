@@ -1,114 +1,122 @@
-[
-  {
-    "slug": "mini-painting-handle",
-    "name": "Mini Painting Handle",
-    "uniqueModels": null,
-    "variants": null,
-    "makerworldUrl": null
+{
+  "totals": {
+    "modules": 16,
+    "uniqueModels": 61,
+    "variants": 48,
+    "totalModelsAndVariants": 109
   },
-  {
-    "slug": "mini-painting-handle-toppers",
-    "name": "Mini Painting Handle Toppers",
-    "uniqueModels": null,
-    "variants": null,
-    "makerworldUrl": null
-  },
-  {
-    "slug": "bike-grip-mini-painting-handle",
-    "name": "Bike Grip Mini Painting Handle",
-    "uniqueModels": null,
-    "variants": null,
-    "makerworldUrl": null
-  },
-  {
-    "slug": "mini-painting-handle-docks-and-trays",
-    "name": "Mini Painting Handle Docks and Trays",
-    "uniqueModels": null,
-    "variants": null,
-    "makerworldUrl": null
-  },
-  {
-    "slug": "ergonomic-brush-grip",
-    "name": "Ergonomic Brush Grip",
-    "uniqueModels": null,
-    "variants": null,
-    "makerworldUrl": null
-  },
-  {
-    "slug": "ergonomic-brush-grip-rack",
-    "name": "Ergonomic Brush Grip Rack",
-    "uniqueModels": null,
-    "variants": null,
-    "makerworldUrl": null
-  },
-  {
-    "slug": "wall-mount-drilling-guide",
-    "name": "Wall Mount Drilling Guide",
-    "uniqueModels": null,
-    "variants": null,
-    "makerworldUrl": null
-  },
-  {
-    "slug": "pro-acryl-expert-acrylics-paint-rack",
-    "name": "Pro Acryl Expert Acrylics Paint Rack",
-    "uniqueModels": null,
-    "variants": null,
-    "makerworldUrl": null
-  },
-  {
-    "slug": "all-in-one-paint-rack",
-    "name": "All in One Paint Rack",
-    "uniqueModels": null,
-    "variants": null,
-    "makerworldUrl": null
-  },
-  {
-    "slug": "brush-rinse-station",
-    "name": "Brush Rinse Station",
-    "uniqueModels": null,
-    "variants": null,
-    "makerworldUrl": null
-  },
-  {
-    "slug": "blue-brush-rinse-station-dock",
-    "name": "Blue Brush Rinse Station Dock",
-    "uniqueModels": null,
-    "variants": null,
-    "makerworldUrl": null
-  },
-  {
-    "slug": "meeden-dry-palette-dock",
-    "name": "Meeden Dry Palette Dock",
-    "uniqueModels": null,
-    "variants": null,
-    "makerworldUrl": null
-  },
-  {
-    "slug": "basic-brush-rack",
-    "name": "Basic Brush Rack",
-    "uniqueModels": null,
-    "variants": null,
-    "makerworldUrl": null
-  },
-  {
-    "slug": "ink-drybrush-pad-dock",
-    "name": "Ink Drybrush Pad Dock",
-    "uniqueModels": null,
-    "variants": null,
-    "makerworldUrl": null
-  },
-  {
-    "slug": "drybrush-texture-pad-palette",
-    "name": "Drybrush Texture Pad Palette",
-    "uniqueModels": null,
-    "variants": null,
-    "makerworldUrl": null
-  },
-  {
-    "slug": "module-storage-riser",
-    "name": "Module Storage Riser",
-    "uniqueModels": null,
-    "variants": null,
-    "makerworldUrl": null
-  }
-]
+  "modules": [
+    {
+      "slug": "mini-painting-handle",
+      "name": "Mini Painting Handle",
+      "uniqueModels": 2,
+      "variants": 4,
+      "makerworldUrl": null
+    },
+    {
+      "slug": "mini-painting-toppers",
+      "name": "Mini Painting Toppers",
+      "uniqueModels": 6,
+      "variants": 12,
+      "makerworldUrl": null
+    },
+    {
+      "slug": "bike-grip-mini-painting-handle",
+      "name": "Bike Grip Mini Painting Handle",
+      "uniqueModels": 6,
+      "variants": 0,
+      "makerworldUrl": null
+    },
+    {
+      "slug": "mini-painting-handle-docks-and-trays",
+      "name": "Mini Painting Handle Docks and Trays",
+      "uniqueModels": 10,
+      "variants": 10,
+      "makerworldUrl": null
+    },
+    {
+      "slug": "ergonomic-brush-grip",
+      "name": "Ergonomic Brush Grip",
+      "uniqueModels": 10,
+      "variants": 4,
+      "makerworldUrl": null
+    },
+    {
+      "slug": "ergonomic-brush-grip-rack",
+      "name": "Ergonomic Brush Grip Rack",
+      "uniqueModels": 2,
+      "variants": 4,
+      "makerworldUrl": null
+    },
+    {
+      "slug": "wall-mount-drilling-guide",
+      "name": "Wall Mount Drilling Guide",
+      "uniqueModels": 8,
+      "variants": 0,
+      "makerworldUrl": null
+    },
+    {
+      "slug": "pro-acryl-expert-acrylics-paint-rack",
+      "name": "Pro Acryl Expert Acrylics Paint Rack",
+      "uniqueModels": 2,
+      "variants": 4,
+      "makerworldUrl": null
+    },
+    {
+      "slug": "all-in-one-paint-rack",
+      "name": "All in One Paint Rack",
+      "uniqueModels": 4,
+      "variants": 3,
+      "makerworldUrl": null
+    },
+    {
+      "slug": "brush-rinse-station",
+      "name": "Brush Rinse Station",
+      "uniqueModels": 1,
+      "variants": 1,
+      "makerworldUrl": null
+    },
+    {
+      "slug": "blue-brush-rinse-station-dock",
+      "name": "Blue Brush Rinse Station Dock",
+      "uniqueModels": 1,
+      "variants": 1,
+      "makerworldUrl": null
+    },
+    {
+      "slug": "meeden-dry-palette-dock",
+      "name": "Meeden Dry Palette Dock",
+      "uniqueModels": 1,
+      "variants": 1,
+      "makerworldUrl": null
+    },
+    {
+      "slug": "basic-brush-rack",
+      "name": "Basic Brush Rack",
+      "uniqueModels": 3,
+      "variants": 1,
+      "makerworldUrl": null
+    },
+    {
+      "slug": "ink-drybrush-pad-dock",
+      "name": "Ink Drybrush Pad Dock",
+      "uniqueModels": 2,
+      "variants": 2,
+      "makerworldUrl": null
+    },
+    {
+      "slug": "drybrush-texture-pad-palette",
+      "name": "Drybrush Texture Pad Palette",
+      "uniqueModels": 1,
+      "variants": 1,
+      "makerworldUrl": null
+    },
+    {
+      "slug": "module-storage-riser",
+      "name": "Module Storage Riser",
+      "uniqueModels": 2,
+      "variants": 0,
+      "makerworldUrl": null
+    }
+  ]
+}

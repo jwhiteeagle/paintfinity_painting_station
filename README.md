@@ -6,7 +6,7 @@ description: Lightweight Bun React workspace for Paintfinity UI exploration and 
 workflow_origin: bun-boilerplate
 ---
 
-last_updated: "03-23-26"
+last_updated: "04-25-26"
 
 ## Paintfinity Painting Station
 
@@ -30,6 +30,10 @@ This repository is the active Paintfinity workspace.Scaffolded from local boiler
 - Components use utilities for lightweight and portable builds across projects.
 - Theme values are swapped per project while the component-facing token contract stays stable.
 - This keeps styling compatible with shadcn primitives and other future shadcn intake from registries.
+
+## Data
+
+- `src/data/paintfinity-modules.json` stores the current module catalog counts used by the static-site lane.
 
 ## GitHub Pages Deployment
 
