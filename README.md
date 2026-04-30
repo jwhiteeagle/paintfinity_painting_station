@@ -10,7 +10,7 @@ last_updated: "04-25-26"
 
 ## Paintfinity Painting Station
 
-This repository is the active Paintfinity workspace.Scaffolded from local boilerplate repo `bun-boilerplate`
+This repository is the active Paintfinity workspace. Scaffolded from local boilerplate repo `bun-boilerplate`
 
 ## Deployed at
 

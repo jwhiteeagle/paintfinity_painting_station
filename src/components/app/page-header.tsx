@@ -24,7 +24,7 @@ export function PageHeader({
   const centered = align === "center"
 
   return (
-    <section className={cn("stack-md", centered && "type-center", className)}>
+    <section className={cn("stack-md", centered && "text-center", className)}>
       <div
         className={cn(
           "layout-cluster",
@@ -36,7 +36,13 @@ export function PageHeader({
         <div className={cn("stack-sm", centered && "max-w-3xl")}>
           <h1 className={cn("type-title type-title-lg", titleClassName)}>{title}</h1>
           {description ? (
-            <div className={cn("type-copy type-muted", descriptionClassName)}>
+            <div
+              className={cn(
+                "max-w-3xl text-base leading-relaxed text-muted-foreground",
+                centered && "mx-auto text-center",
+                descriptionClassName
+              )}
+            >
               {description}
             </div>
           ) : null}

@@ -1,6 +1,32 @@
 @import "tailwindcss";
 
-/* ** Theme Inputs - tweakcn-native ** */
+/* ** CLG Brand Assets - baseline fonts ** */
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("./assets/brand/fonts/BebasNeue-Regular.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("./assets/brand/fonts/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 100 800;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/brand/fonts/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 100 900;
+}
+
+/* ** Project Theme Inputs - tweakcn merge zone ** */
 
 :root {
   --background: oklch(1 0 0);
@@ -94,14 +120,14 @@
   --warm-accent-foreground: oklch(0.19 0.03 45);
 }
 
-/* ** Tailwind Bridge - semantic map ** */
+/* ** Tailwind Bridge - CLG baseline tokens ** */
 
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-sans: Anaheim, ui-sans-serif, sans-serif, system-ui;
-  --font-serif: Merriweather, ui-serif, serif;
-  --font-mono: Inter, ui-monospace, monospace, system-ui;
+  --font-sans: "Roboto", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bebas Neue", Impact, ui-sans-serif, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
 
   --shadow-2xs: 0px 4px 15px 0px hsl(0 0% 0% / 0.04);
   --shadow-xs: 0px 4px 15px 0px hsl(0 0% 0% / 0.04);
@@ -135,7 +161,6 @@
 }
 
 @theme inline {
-
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
@@ -185,7 +210,7 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-/* ** Base Styles - global defaults ** */
+/* ** Base Styles - app defaults ** */
 
 @layer base {
   * {
@@ -198,7 +223,7 @@
   }
 }
 
-/* ** Project Utilities - layout/type ** */
+/* ** CLG Baseline Utilities - layout ** */
 
 @utility layout-shell {
   @apply mx-auto flex min-h-screen w-full max-w-7xl flex-col px-4 sm:px-6 lg:px-8;
@@ -216,13 +241,11 @@
   @apply space-y-6;
 }
 
-@utility stack-lg {
-  @apply space-y-10;
-}
-
 @utility layout-cluster {
   @apply flex flex-wrap items-center gap-3;
 }
+
+/* ** CLG Baseline Utilities - surfaces ** */
 
 @utility surface-card {
   @apply rounded-xl border border-border bg-card shadow-sm;
@@ -232,26 +255,28 @@
   @apply rounded-lg border border-border/60 bg-muted/30;
 }
 
-@utility surface-frame {
-  @apply overflow-hidden rounded-xl border border-border/70 bg-muted/40 shadow-sm;
-}
+/* ** CLG Baseline Utilities - typography ** */
 
 @utility type-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
+  letter-spacing: 0;
   text-wrap: balance;
-  @apply text-center font-semibold tracking-tight text-foreground;
+  @apply text-center font-normal text-foreground;
 }
 
 @utility type-title-sm {
   @apply text-2xl leading-tight;
 }
 
-@utility type-title-md {
-  @apply text-4xl leading-tight;
-}
-
 @utility type-title-lg {
   @apply text-5xl leading-none sm:text-6xl;
+}
+
+@utility type-card-title {
+  font-family: var(--font-display);
+  letter-spacing: 0.065em;
+  text-wrap: balance;
+  @apply text-center text-2xl font-normal leading-tight text-foreground;
 }
 
 @utility type-copy {
@@ -262,18 +287,12 @@
   @apply text-center text-sm leading-relaxed text-foreground;
 }
 
-@utility type-muted {
-  @apply text-muted-foreground;
-}
-
-@utility type-center {
-  @apply text-center;
-}
-
 @utility type-kicker {
+  font-family: var(--font-mono);
   @apply text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground;
 }
 
-@utility media-ratio-4-5 {
-  aspect-ratio: 4 / 5;
+@utility type-label {
+  font-family: var(--font-mono);
+  @apply text-[0.68rem] font-medium uppercase tracking-[0.14em];
 }

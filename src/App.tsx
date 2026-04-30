@@ -1,143 +1,109 @@
-import { AppShell } from "@/components/app/app-shell"
-import { ContentCard } from "@/components/app/content-card"
-import { PageHeader } from "@/components/app/page-header"
-import { SectionContainer } from "@/components/app/section-container"
-import { ThemeToggle } from "@/components/app/theme-toggle"
-import { Button } from "@/components/ui/button"
-
-const quickFacts = [
-  {
-    title: "Developed by a Commission Miniature Painter",
-    description:
-      "Paintfinity is a 3D printable miniature painting station built from the perspective of repeat hobby use, station setup, and practical workflow.",
-  },
-  {
-    title: "Hosted on MakerWorld",
-    description:
-      "All Paintfinity models are intended to live on MakerWorld under their respective licenses, making release links and print access easy to keep visible.",
-  },
-  {
-    title: "Built for Gridfinity",
-    description:
-      "Paintfinity is built to work with Zack Freedman's open source storage system, Gridfinity, while adding a magnetic base approach for flexible station layouts.",
-  },
-] as const
-
-const modulePlaceholders = [
-  {
-    title: "Module Showcase Cards",
-    description:
-      "This section will expand into the product-facing module grid: title, concise description, preview image, and a direct MakerWorld link for each release.",
-    actionLabel: "MakerWorld Releases",
-    href: "https://makerworld.com/",
-  },
-  {
-    title: "Quick Links",
-    description:
-      "The earlier Paintfinity showcase used a quick-link block for fast scanning. That pattern still fits the product and can grow into grouped module shortcuts as the catalog fills out.",
-    actionLabel: "Jump to Gridfinity",
-    href: "https://gridfinity.xyz/",
-  },
-  {
-    title: "Release-Friendly Structure",
-    description:
-      "The immediate goal is a clear landing page that explains what Paintfinity is, why it is useful, and where each module can be found as assets and product shots are added.",
-    actionLabel: "Chief Live Gaming",
-    href: "https://chieflivegaming.com/",
-  },
-] as const
+import { AppShell } from "@/components/app/app-shell";
+import { ContentCard } from "@/components/app/content-card";
+import { HeroHeader } from "@/components/app/hero-header";
+import { ModuleCard } from "@/components/app/module-card";
+import { PageHeader } from "@/components/app/page-header";
+import { SectionContainer } from "@/components/app/section-container";
+import { SiteFooter } from "@/components/app/site-footer";
+import { SiteHeader } from "@/components/app/site-header";
+import { Button } from "@/components/ui/button";
 
 export default function App() {
   return (
     <AppShell
-      header={
-        <div className="flex items-center justify-between gap-3">
-          <div>
-            <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
-              Paintfinity
-            </p>
-            <p className="text-sm text-muted-foreground">
-              3D Printable Miniature Painting Station
-            </p>
-          </div>
-          <ThemeToggle />
-        </div>
-      }
-      footer={
-        <div className="space-y-2 text-sm text-muted-foreground">
-          <p>
-            All Paintfinity models were designed by Jake / Chief Live Gaming and are
-            hosted on MakerWorld under their respective licenses.
-          </p>
-          <p>
-            Paintfinity is built to work with Zack Freedman's open source storage
-            system, Gridfinity.
-          </p>
-        </div>
-      }
+      header={<SiteHeader />}
+      footer={<SiteFooter />}
+      mainClassName="pt-0"
     >
-      <SectionContainer width="wide" surface="none">
-        <PageHeader
-          title="Paintfinity Painting Station"
-          description="Developed by a commission miniature painter. A one stop solution for miniature painting hobby station needs, with a landing page structure that can grow around module previews, release links, and product photography."
+      <SectionContainer width="wide" surface="none" className="pt-0">
+        <HeroHeader
+          title="Paintfinity"
+          tagline="A 3-D printed miniature painting station"
           actions={
-            <div className="flex flex-wrap gap-2">
+            <>
               <a href="#modules">
                 <Button variant="main">Available Modules</Button>
               </a>
-              <a href="https://gridfinity.xyz/" target="_blank" rel="noreferrer">
+              <a
+                href="https://gridfinity.xyz/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <Button variant="secondary">Gridfinity</Button>
               </a>
-            </div>
+            </>
           }
-        />
+        >
+          <p>
+            Developed by a commission miniature painter with over a decade of
+            experience, Paintfinity is a fully modular hobby station built to
+            support large scale projects, improve ergonomics, and speed up your
+            painting workflow.
+          </p>
+          <p>
+            Commission painters move thousands of models across the painting
+            bench every year. Paintfinity turns that practical bench experience
+            into a system that works for hobbyists painting one model or one
+            hundred.
+          </p>
+        </HeroHeader>
       </SectionContainer>
 
-      <SectionContainer width="default" surface="subtle">
-        <div className="grid gap-4 md:grid-cols-3">
-          {quickFacts.map((fact, index) => (
-            <ContentCard
-              key={fact.title}
-              variant={
-                index === 0 ? "text" : index === 1 ? "utility" : "gallery"
-              }
-              title={fact.title}
-            >
-              {fact.description}
-            </ContentCard>
-          ))}
-        </div>
+      <SectionContainer width="default" surface="subtle" contentLayout="grid-4">
+        <ContentCard variant="default" title="Constantly Expanding">
+          This is a passion project grounded in the experience I've built over the
+          last decade commission miniature painting full time. I will continue to
+          expand the collection of official modules to make the hobby station as
+          versatile as possible!
+        </ContentCard>
+        <ContentCard variant="accent" title="Completely Free. Right now.">
+          No kickstarters. No Roadmaps. No waiting. All of my models are FREE TO
+          DOWNLOAD and LIVE NOW.
+        </ContentCard>
+        <ContentCard variant="subtle" title="Modular and Customizable">
+          Paintfinity covers most of your mini painting needs. Want more? Mix in
+          any other standard Gridfinity compatible models to build a truly unique
+          hobby station.
+        </ContentCard>
+        <ContentCard variant="outlined" title="Built for Gridfinity">
+          Paintfinity is built to work with Zack Freedman's open source system,
+          Gridfinity. Don't care about Gridfinity? I have smooth bottom variants
+          too!
+        </ContentCard>
       </SectionContainer>
 
-      <SectionContainer width="wide" surface="none" className="scroll-mt-20" id="modules">
+      <SectionContainer
+        width="default"
+        surface="none"
+        contentLayout="stack"
+        className="scroll-mt-20"
+        id="modules"
+      >
         <PageHeader
+          align="center"
           title="Available Modules"
           description="This is the product-facing content lane the old showcase was moving toward: cards with a title, short description, preview image space, and a clear link out to MakerWorld as each Paintfinity module is finalized."
         />
       </SectionContainer>
 
-      <SectionContainer width="default" surface="subtle">
-        <div className="grid gap-4 lg:grid-cols-3">
-          {modulePlaceholders.map((item, index) => (
-            <ContentCard
-              key={item.title}
-              variant={index === 2 ? "cta" : "default"}
-              title={item.title}
-              contentClassName="space-y-4"
-            >
-              <div className="aspect-4/3 rounded-lg border border-dashed border-border/80 bg-muted/40" />
-              <p>{item.description}</p>
-              <div>
-                <a href={item.href} target="_blank" rel="noreferrer">
-                  <Button variant={index === 2 ? "main" : "outline"}>
-                    {item.actionLabel}
-                  </Button>
-                </a>
-              </div>
-            </ContentCard>
-          ))}
-        </div>
+      <SectionContainer width="wide" surface="subtle" contentLayout="grid-4">
+        <ModuleCard title="Mini Painting Handle" />
+        <ModuleCard title="Mini Painting Toppers" />
+        <ModuleCard title="Bike Grip Mini Painting Handle" />
+        <ModuleCard title="Mini Painting Handle Docks and Trays" />
+        <ModuleCard title="Ergonomic Brush Grip" />
+        <ModuleCard title="Ergonomic Brush Grip Rack" />
+        <ModuleCard title="Wall Mount Drilling Guide" />
+        <ModuleCard title="Pro Acryl Expert Acrylics Paint Rack" />
+        <ModuleCard title="All in One Paint Rack" />
+        <ModuleCard title="Brush Rinse Station" />
+        <ModuleCard title="Blue Brush Rinse Station Dock" />
+        <ModuleCard title="Meeden Dry Palette Dock" />
+        <ModuleCard title="Basic Brush Rack" />
+        <ModuleCard title="Ink Drybrush Pad Dock" />
+        <ModuleCard title="Drybrush Texture Pad Palette" />
+        <ModuleCard title="Module Storage Riser" />
       </SectionContainer>
     </AppShell>
-  )
+  );
 }
