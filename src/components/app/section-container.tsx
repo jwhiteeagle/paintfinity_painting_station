@@ -21,8 +21,8 @@ const widthClasses: Record<NonNullable<SectionContainerProps["width"]>, string> 
 
 const surfaceClasses: Record<NonNullable<SectionContainerProps["surface"]>, string> = {
   none: "",
-  subtle: "rounded-lg border border-border/60 bg-muted/25",
-  card: "rounded-xl border border-border bg-card shadow-sm",
+  subtle: "rounded-none border border-border/60 bg-muted/25",
+  card: "rounded-none border border-border bg-card shadow-sm",
 }
 
 const contentLayoutClasses: Record<

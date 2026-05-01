@@ -6,11 +6,11 @@ description: Lightweight Bun React workspace for Paintfinity UI exploration and 
 workflow_origin: bun-boilerplate
 ---
 
-last_updated: "04-25-26"
+last_updated: "04-30-26"
 
 ## Paintfinity Painting Station
 
-This repository is the active Paintfinity workspace. Scaffolded from local boilerplate repo `bun-boilerplate`
+This repository is the active Paintfinity static-site workspace. It explains the Paintfinity module system, routes downloads to off-site mirrors such as MakerWorld, and provides a lightweight support/donation path.
 
 ## Deployed at
 
@@ -33,7 +33,8 @@ This repository is the active Paintfinity workspace. Scaffolded from local boile
 
 ## Data
 
-- `src/data/paintfinity-modules.json` stores the current module catalog counts used by the static-site lane.
+- `src/data/paintfinity-modules.json` stores module-card data and catalog counts for the static-site lane.
+- Detailed module descriptions, measurements, print guidance, licenses, and file payloads live on MakerWorld or other download mirrors.
 
 ## GitHub Pages Deployment
 

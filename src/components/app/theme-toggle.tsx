@@ -12,7 +12,7 @@ export function ThemeToggle() {
 
   return (
     <div
-      className="inline-flex rounded-md border border-border bg-background p-0.5 shadow-sm"
+      className="inline-flex rounded-none border border-border bg-background p-0.5 shadow-sm"
       role="group"
       aria-label="Theme selection"
     >
@@ -21,7 +21,7 @@ export function ThemeToggle() {
           key={option.value}
           type="button"
           className={cn(
-            "type-label h-7 rounded-sm px-2.5 text-muted-foreground transition-colors hover:bg-muted/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+            "type-label h-7 rounded-none px-2.5 text-muted-foreground transition-colors hover:bg-muted/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
             theme === option.value && "bg-primary text-primary-foreground shadow-xs"
           )}
           aria-pressed={theme === option.value}

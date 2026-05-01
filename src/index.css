@@ -226,7 +226,7 @@
 /* ** CLG Baseline Utilities - layout ** */
 
 @utility layout-shell {
-  @apply mx-auto flex min-h-screen w-full max-w-7xl flex-col px-4 sm:px-6 lg:px-8;
+  @apply mx-auto flex min-h-screen w-full max-w-[90rem] flex-col px-4 sm:px-6 lg:px-8;
 }
 
 @utility layout-section {
@@ -248,11 +248,11 @@
 /* ** CLG Baseline Utilities - surfaces ** */
 
 @utility surface-card {
-  @apply rounded-xl border border-border bg-card shadow-sm;
+  @apply rounded-none border border-border bg-card shadow-sm;
 }
 
 @utility surface-subtle {
-  @apply rounded-lg border border-border/60 bg-muted/30;
+  @apply rounded-none border border-border/60 bg-muted/30;
 }
 
 /* ** CLG Baseline Utilities - typography ** */
@@ -274,9 +274,9 @@
 
 @utility type-card-title {
   font-family: var(--font-display);
-  letter-spacing: 0.065em;
+  letter-spacing: 0.08em;
   text-wrap: balance;
-  @apply text-center text-2xl font-normal leading-tight text-foreground;
+  @apply text-center text-8xl font-normal leading-[0.95] text-foreground/90;
 }
 
 @utility type-copy {

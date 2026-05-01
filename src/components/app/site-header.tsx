@@ -1,10 +1,22 @@
 import { ThemeToggle } from "@/components/app/theme-toggle"
+import clgIconUrl from "@/assets/brand/clg-192.png"
 import paintfinityLockupUrl from "@/assets/brand/paintfinity-watermark-clean.png"
 
 export function SiteHeader() {
   return (
     <div className="flex flex-col gap-4 border-b border-border/70 pb-4 sm:flex-row sm:items-center sm:justify-between">
-      <a href="#" className="block max-w-max" aria-label="Paintfinity home">
+      <a
+        href="#"
+        className="flex max-w-max items-center gap-3"
+        aria-label="Paintfinity home"
+      >
+        <img
+          src={clgIconUrl}
+          alt=""
+          className="size-10 border border-border bg-background sm:size-12"
+          width="192"
+          height="192"
+        />
         <img
           src={paintfinityLockupUrl}
           alt=""
