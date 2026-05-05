@@ -4,12 +4,16 @@ import { ModuleCard } from "@/components/app/module-card";
 import { SectionContainer } from "@/components/app/section-container";
 import { SiteFooter } from "@/components/app/site-footer";
 import { SiteHeader } from "@/components/app/site-header";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import buyMeCoffeeButtonUrl from "@/assets/buymecoffee-560x280.png";
 import catalogHeaderUrl from "@/assets/catalog-560x280.png";
+import { moduleHeroImages } from "@/assets/module/module-hero-images";
 import paypalButtonUrl from "@/assets/paypal-560x280.png";
 import supportHeaderUrl from "@/assets/support-560x280.png";
 import moduleCatalog from "@/data/paintfinity-modules.json";
+
+const paypalDonateUrl = "https://www.paypal.com/donate/?hosted_button_id=RNAQ4X8MUK5A8";
+const buyMeCoffeeUrl = "https://buymeacoffee.com/chieflivegaming";
 
 export default function App() {
   return (
@@ -21,7 +25,7 @@ export default function App() {
       <SectionContainer width="wide" surface="none" className="pt-0">
         <HeroHeader
           title="Paintfinity"
-          tagline="A 3-D printed miniature painting station"
+          tagline="A 3D printed miniature painting station"
           leftRail={
             <div className="flex h-full flex-col gap-4">
               <img
@@ -80,33 +84,41 @@ export default function App() {
                   If you find my system useful, tell a fellow hobbyist about it!
                   <br />
                   <br />
-                  If you'd like to support the ongoing development of Paintfinity, use one of my virtual tip jars below!
+                  If you'd like to support the ongoing development of Paintfinity with a monetary donation, use one of my virtual tip jars below!
                 </p>
                 <div className="grid justify-items-center gap-3">
-                  <Button
-                    type="button"
-                    variant="main"
+                  <a
+                    href={paypalDonateUrl}
+                    target="_blank"
+                    rel="noreferrer"
                     aria-label="Support Paintfinity with PayPal"
-                    className="h-auto w-full max-w-28 border-secondary/90 p-0.5"
+                    className={buttonVariants({
+                      variant: "main",
+                      className: "h-auto w-full max-w-28 overflow-hidden border-secondary/90 p-0",
+                    })}
                   >
                     <img
                       src={paypalButtonUrl}
                       alt=""
                       className="aspect-2/1 w-full object-contain"
                     />
-                  </Button>
-                  <Button
-                    type="button"
-                    variant="main"
+                  </a>
+                  <a
+                    href={buyMeCoffeeUrl}
+                    target="_blank"
+                    rel="noreferrer"
                     aria-label="Support Paintfinity with Buy Me a Coffee"
-                    className="h-auto w-full max-w-28 border-secondary/90 p-0.5"
+                    className={buttonVariants({
+                      variant: "main",
+                      className: "h-auto w-full max-w-28 overflow-hidden border-secondary/90 p-0",
+                    })}
                   >
                     <img
                       src={buyMeCoffeeButtonUrl}
                       alt=""
                       className="aspect-2/1 w-full object-contain"
                     />
-                  </Button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -144,11 +156,11 @@ export default function App() {
           </p>
           <p>
             I wanted to make a true one stop system that covers everything that might be useful to a variety of painting styles. A 
-            lot of the really well designed 3d printed mini painting stations just aren't meant for batch painting. I wanted to make something
-            that I could use whether painting a display piece, an army, or a giant dragon queen lizard-copter.
+            lot of the really well designed 3D printed mini painting stations just aren't meant for batch painting. I wanted to make something
+            that I could use comfortably- whether I'm painting a 32mm display piece, an army, or a giant dragon.
           </p>
           <p>
-            Paintfinity models are organized into `modules` for quick navigation.
+            Paintfinity models are organized into grouped "modules" for quick navigation.
             All modules have both P1S and A1 Mini sized print plates. The entire module catalog prints with 0 supports. Smooth bottom
             NOGRID variants are included for those who want to opt out of Gridfinity integration.
           </p>
@@ -171,7 +183,7 @@ export default function App() {
             key={module.slug}
             title={module.displayTitle}
             tagline={module.tagline}
-            heroImage={module.heroImage}
+            heroImage={moduleHeroImages[module.slug]}
             makerworldUrl={module.makerworldUrl}
           />
         ))}

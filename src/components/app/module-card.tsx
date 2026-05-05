@@ -30,7 +30,7 @@ export function ModuleCard({
         <CardTitle className="type-card-title">{title}</CardTitle>
       </CardHeader>
 
-      <div className="aspect-5/4 border-b border-border/70 bg-muted/35">
+      <div className="aspect-4/3 border-b border-border/70 bg-muted/35">
         {heroImage ? (
           <img
             src={heroImage}

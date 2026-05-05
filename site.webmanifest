@@ -1,7 +1,7 @@
 {
   "name": "Paintfinity Painting Station",
   "short_name": "Paintfinity",
-  "description": "3d printable mini painting station designed by an army painter",
+  "description": "3D printable mini painting station designed by an army painter",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
