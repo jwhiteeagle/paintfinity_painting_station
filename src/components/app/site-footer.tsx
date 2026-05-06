@@ -2,7 +2,7 @@ import clgBannerUrl from "@/assets/brand/CLG Banner 300x75.png"
 
 export function SiteFooter() {
   return (
-    <div className="border-t border-border/70 pt-5 text-center text-sm text-muted-foreground">
+    <div className="type-body border-t border-border/70 pt-5 text-center">
       <div className="grid justify-items-center gap-5">
         <div className="max-w-3xl space-y-2">
           <p>
@@ -34,7 +34,7 @@ export function SiteFooter() {
           <img
             src={clgBannerUrl}
             alt=""
-            className="h-auto w-[12rem] max-w-full"
+            className="h-auto w-48 max-w-full"
           />
         </a>
       </div>

@@ -4,61 +4,38 @@ import { cn } from "@/lib/utils"
 
 export type SectionContainerProps = {
   children: React.ReactNode
-  as?: "section" | "div"
-  width?: "narrow" | "default" | "wide"
-  surface?: "none" | "subtle" | "card"
-  contentLayout?: "stack" | "grid-2" | "grid-3" | "grid-4"
+  variant?: "hero" | "moduleGrid"
   id?: string
-  className?: string
-  contentClassName?: string
 }
 
-const widthClasses: Record<NonNullable<SectionContainerProps["width"]>, string> = {
-  narrow: "max-w-3xl",
-  default: "max-w-5xl",
-  wide: "max-w-7xl",
-}
-
-const surfaceClasses: Record<NonNullable<SectionContainerProps["surface"]>, string> = {
-  none: "",
-  subtle: "rounded-none border border-border/60 bg-muted/25",
-  card: "rounded-none border border-border bg-card shadow-sm",
-}
-
-const contentLayoutClasses: Record<
-  NonNullable<SectionContainerProps["contentLayout"]>,
+const sectionClasses: Record<
+  NonNullable<SectionContainerProps["variant"]>,
   string
 > = {
-  stack: "stack-md",
-  "grid-2": "grid gap-4 sm:grid-cols-2",
-  "grid-3": "grid gap-4 md:grid-cols-3",
-  "grid-4": "grid gap-4 sm:grid-cols-2 lg:grid-cols-4",
+  hero: "pt-0 pb-6",
+  moduleGrid: "py-6 scroll-mt-20",
+}
+
+const contentClasses: Record<
+  NonNullable<SectionContainerProps["variant"]>,
+  string
+> = {
+  hero: "space-y-6",
+  moduleGrid:
+    "grid gap-4 rounded-none border border-border/60 bg-muted/25 p-5 sm:grid-cols-2 sm:p-6 lg:grid-cols-4",
 }
 
 export function SectionContainer({
   children,
-  as = "section",
-  width = "default",
-  surface = "none",
-  contentLayout = "stack",
+  variant = "hero",
   id,
-  className,
-  contentClassName,
 }: SectionContainerProps) {
-  const Component = as
-
   return (
-    <Component id={id} className={cn("layout-section", widthClasses[width], className)}>
-      <div
-        className={cn(
-          contentLayoutClasses[contentLayout],
-          surfaceClasses[surface],
-          surface !== "none" && "p-5 sm:p-6",
-          contentClassName
-        )}
-      >
-        {children}
-      </div>
-    </Component>
+    <section
+      id={id}
+      className={cn("mx-auto w-full max-w-7xl px-4 sm:px-6", sectionClasses[variant])}
+    >
+      <div className={cn(contentClasses[variant])}>{children}</div>
+    </section>
   )
 }
