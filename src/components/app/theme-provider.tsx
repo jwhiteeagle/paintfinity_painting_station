@@ -14,7 +14,7 @@ const ThemeContext = React.createContext<ThemeContextValue | null>(null)
 const STORAGE_KEY = "paintfinity-theme"
 
 function getSystemTheme(): ResolvedTheme {
-  if (typeof window === "undefined") return "light"
+  if (typeof window === "undefined") return "dark"
   return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
 }
 
@@ -24,10 +24,10 @@ function applyResolvedTheme(theme: ResolvedTheme) {
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setThemeState] = React.useState<Theme>(() => {
-    if (typeof window === "undefined") return "system"
+    if (typeof window === "undefined") return "dark"
     const stored = window.localStorage.getItem(STORAGE_KEY)
     if (stored === "light" || stored === "dark" || stored === "system") return stored
-    return "system"
+    return "dark"
   })
 
   const [resolvedTheme, setResolvedTheme] = React.useState<ResolvedTheme>(() => getSystemTheme())

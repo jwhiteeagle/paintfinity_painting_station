@@ -14,6 +14,8 @@ import moduleCatalog from "@/data/paintfinity-modules.json";
 
 const paypalDonateUrl = "https://www.paypal.com/donate/?hosted_button_id=RNAQ4X8MUK5A8";
 const buyMeCoffeeUrl = "https://buymeacoffee.com/chieflivegaming";
+const contactEmail = "chieflivegaming@gmail.com";
+const moduleRequestMailto = `mailto:${contactEmail}?subject=Paintfinity%20module%20request`;
 
 export default function App() {
   return (
@@ -33,8 +35,8 @@ export default function App() {
                 alt="Catalog"
                 className="aspect-2/1 w-full border border-secondary/80 object-contain"
               />
-              <div className="flex flex-1 items-center">
-                <dl className="grid w-full grid-cols-2 gap-x-4 gap-y-5 text-center lg:grid-cols-1">
+              <div className="flex flex-1 flex-col justify-center gap-4">
+                <dl className="grid w-full grid-cols-2 gap-x-4 gap-y-5 border border-primary/50 bg-linear-to-br from-primary/40 via-primary/5 to-secondary/20 p-4 text-center shadow-xs lg:grid-cols-1">
                   <div>
                     <dt className="font-mono text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">
                       Paintfinity Modules:
@@ -68,6 +70,17 @@ export default function App() {
                     </dd>
                   </div>
                 </dl>
+                <div className="w-full border border-primary/50 bg-linear-to-br from-primary/40 via-primary/5 to-secondary/20 p-4 text-center shadow-xs">
+                  <p className="font-mono text-lg font-semibold uppercase tracking-[0.14em] text-foreground">
+                    In development:
+                  </p>
+                  <p className="mt-3 text-medium leading-relaxed text-muted-foreground">
+                    - Airbrush Stand
+                  </p>
+                  <p className="text-medium leading-relaxed text-muted-foreground">
+                    - Multiboard hanging adapter
+                  </p>
+                </div>
               </div>
             </div>
           }
@@ -80,7 +93,7 @@ export default function App() {
               />
               <div className="flex flex-1 flex-col justify-center gap-4">
                 <p className="text-sm leading-relaxed text-muted-foreground">
-                  Paintfinity is 100% free. I develop it solo as my way of sharing my knowledge and passion for miniature painting with others!
+                  Paintfinity is 100% free. I made it as my way of sharing my knowledge and passion for miniature painting with others!
                   If you find my system useful, tell a fellow hobbyist about it!
                   <br />
                   <br />
@@ -94,13 +107,14 @@ export default function App() {
                     aria-label="Support Paintfinity with PayPal"
                     className={buttonVariants({
                       variant: "main",
-                      className: "h-auto w-full max-w-28 overflow-hidden border-secondary/90 p-0",
+                      size: "image",
+                      className: "w-28 overflow-hidden border-secondary/90 shadow-md shadow-primary/25 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/30",
                     })}
                   >
                     <img
                       src={paypalButtonUrl}
                       alt=""
-                      className="aspect-2/1 w-full object-contain"
+                      className="block aspect-2/1 w-full"
                     />
                   </a>
                   <a
@@ -110,14 +124,32 @@ export default function App() {
                     aria-label="Support Paintfinity with Buy Me a Coffee"
                     className={buttonVariants({
                       variant: "main",
-                      className: "h-auto w-full max-w-28 overflow-hidden border-secondary/90 p-0",
+                      size: "image",
+                      className: "w-28 overflow-hidden border-secondary/90 shadow-md shadow-primary/25 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/30",
                     })}
                   >
                     <img
                       src={buyMeCoffeeButtonUrl}
                       alt=""
-                      className="aspect-2/1 w-full object-contain"
+                      className="block aspect-2/1 w-full"
                     />
+                  </a>
+                </div>
+                <div className="w-full border border-primary/50 bg-linear-to-br from-primary/40 via-primary/5 to-secondary/20 p-4 text-center shadow-xs">
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    Have a request for a new module?
+                    <br />
+                    Contact me here:
+                  </p>
+                  <p className="mt-2 font-mono text-xs font-semibold text-foreground">
+                    {contactEmail}
+                  </p>
+                  <a
+                    href={moduleRequestMailto}
+                    className="mt-3 inline-flex"
+                    aria-label="Email Chief Live Gaming with a Paintfinity module request"
+                  >
+                    <Button variant="secondary" size="sm">Contact</Button>
                   </a>
                 </div>
               </div>
@@ -129,21 +161,22 @@ export default function App() {
                 <Button variant="main">Available Modules</Button>
               </a>
               <a
-                href="https://gridfinity.xyz/"
+                href="https://makerworld.com/en/collections/17272977-paintfinity"
                 target="_blank"
                 rel="noreferrer"
               >
-                <Button variant="secondary">Gridfinity</Button>
+                <Button variant="secondary">MakerWorld Collection</Button>
               </a>
             </>
           }
         >
           <p>
-            Hey. It's me, Jake. I've been a full time commission miniature painter "professionally" for over a decade
-            now. I created Paintfinity as a passion project to streamline the mini painting process in the best way I could. My system works
-            best when utilized with Gridfinity, but it's not a requirement.
+            Hey. I'm Jake. I've been a full time commission miniature painter "professionally" for over a decade
+            now. I created Paintfinity as a passion project to share my love for miniature painting and try to make it accessible to more painters. 
+            My goal is a true one stop system that covers everything you might need for a variety of painting styles or project sizes. 
           </p>
           <p>
+            My system works best when utilized with Gridfinity, but it's not a requirement.
             Learn more about Gridfinity here:{" "}
             <a
               href="https://gridfinity.xyz/"
@@ -154,19 +187,15 @@ export default function App() {
               https://gridfinity.xyz/
             </a>
           </p>
+          
           <p>
-            I wanted to make a true one stop system that covers everything that might be useful to a variety of painting styles. A 
-            lot of the really well designed 3D printed mini painting stations just aren't meant for batch painting. I wanted to make something
-            that I could use comfortably- whether I'm painting a 32mm display piece, an army, or a giant dragon.
+            I've organized Paintfinity model sets into themed "modules" for quick navigation.
+            My entire module catalog prints with 0 supports and is optimized for a 0.4mm nozzle. Smooth bottom
+            NOGRID model variants are included for those who want to opt out of Gridfinity integration.
           </p>
-          <p>
-            Paintfinity models are organized into grouped "modules" for quick navigation.
-            All modules have both P1S and A1 Mini sized print plates. The entire module catalog prints with 0 supports. Smooth bottom
-            NOGRID variants are included for those who want to opt out of Gridfinity integration.
-          </p>
-            <p>
+          <p className="text-lg font-bold text-foreground/75">
             Paintfinity is completely free!
-            No e-mail lists, no crowdfunding, no roadmaps. The entire system is available to download and use right now.
+            No e-mail lists, no crowdfunding, no roadmaps. The entire system is available to download and use right now!
           </p>
         </HeroHeader>
       </SectionContainer>
@@ -182,7 +211,7 @@ export default function App() {
           <ModuleCard
             key={module.slug}
             title={module.displayTitle}
-            tagline={module.tagline}
+            highlights={module.highlights}
             heroImage={moduleHeroImages[module.slug]}
             makerworldUrl={module.makerworldUrl}
           />

@@ -12,6 +12,7 @@ const buttonVariants = cva(
         main: "bg-primary text-primary-foreground shadow-sm hover:bg-primary/90",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         outline: "border-border bg-background text-foreground hover:bg-muted/70",
+        selector: "border-border bg-primary/60 p-0.5 text-foreground shadow-sm hover:bg-muted/70 hover:text-foreground/90",
         ghost: "text-foreground hover:bg-muted/70",
         link: "border-transparent text-primary underline-offset-4 hover:underline",
       },
@@ -20,6 +21,7 @@ const buttonVariants = cva(
         sm: "h-8 px-3 text-[0.68rem] tracking-[0.14em]",
         lg: "h-10 px-6",
         icon: "size-9",
+        image: "h-auto p-0",
       },
     },
     defaultVariants: {

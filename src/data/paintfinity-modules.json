@@ -10,7 +10,12 @@
       "slug": "mini-painting-handle",
       "name": "Mini Painting Handle",
       "displayTitle": "Mini Painting Handle",
-      "tagline": "Stable, modular handles for cleaner batch painting workflows.",
+      "highlights": [
+        "Simple mini painting handle with a few extras. Batch painting friendly.",
+        "Threaded 2-piece handle with a hollow cavity for adding weight.",
+        "Adding weight (optional) increases stability significantly with heavier models.",
+        "Optional magnets on both ends interface with different model toppers, trays, and docks."  
+      ],
       "uniqueModels": 2,
       "variants": 4,
       "makerworldUrl": null
@@ -18,8 +23,13 @@
     {
       "slug": "mini-painting-toppers",
       "name": "Mini Painting Toppers",
-      "displayTitle": "Mini Painting Toppers",
-      "tagline": "Swappable toppers for magnets, pins, putty, and glue.",
+      "displayTitle": "Mini Painting Handle Toppers",
+      "highlights": [
+        "Toppers are designed to attach magnetically to the top of the mini painting handle.",
+        "Models can be secured to toppers with poster putty, hot glue (my favorite), museum wax, etc.",
+        "Preset holes can be drilled out to desired sizes for pinning models directly to the topper.",
+        "Multiple sizes and styles, rounds are optimized to print faster."
+      ],
       "uniqueModels": 6,
       "variants": 12,
       "makerworldUrl": null
@@ -28,7 +38,12 @@
       "slug": "bike-grip-mini-painting-handle",
       "name": "Bike Grip Mini Painting Handle",
       "displayTitle": "Bike Grip Mini Painting Handle",
-      "tagline": "Comfort-focused painting handles built around bicycle grips.",
+      "highlights": [
+        "Comfort-focused painting handle core designed to fit inside most bicycle handlebar grips.",
+        "Utilizes all the same toppers, trays, and docks as the standard mini painting handle.",
+        "Hollow design allows for adding weight.",
+        "Recommended for more advanced users who want to customize their handles."
+      ],
       "uniqueModels": 6,
       "variants": 0,
       "makerworldUrl": null
@@ -36,8 +51,15 @@
     {
       "slug": "mini-painting-handle-docks-and-trays",
       "name": "Mini Painting Handle Docks and Trays",
-      "displayTitle": "Mini Painting Handle Docks and Trays",
-      "tagline": "Docks and trays for handles, toppers, and batch work.",
+      "displayTitle": "Mini Painting Handle Docks + Trays",
+      "highlights": [
+        "A collection of models designed to hold painting handles and toppers securely when not in use.",
+        "Docks and Trays (Docks with built-in carrying handles) available in multiple sizes.",
+        "Keep models organized and protected while painting.",
+        "Allows for efficient workflows that scale up with your project.",
+        "Every model can get its own topper while the painter swaps toppers onto a single handle.",
+        "Every model can get a full topper + handle setup, letting the painter swap models easily with one hand."
+      ],
       "uniqueModels": 10,
       "variants": 10,
       "makerworldUrl": null
@@ -46,7 +68,12 @@
       "slug": "ergonomic-brush-grip",
       "name": "Ergonomic Brush Grip",
       "displayTitle": "Ergonomic Brush Grip",
-      "tagline": "Threaded brush grips for comfort, control, and reduced strain.",
+      "highlights": [
+        "2-piece design with non-marring clamping collet.",
+        "Fits a wide range of brush handle sizes and shapes.",
+        "Larger grip surface area allows for more varied grips and better control - helps reduce hand strain.",
+        "Optional magnet for secure tip-down brush storage in racks."
+      ],
       "uniqueModels": 10,
       "variants": 4,
       "makerworldUrl": null
@@ -55,7 +82,11 @@
       "slug": "ergonomic-brush-grip-rack",
       "name": "Ergonomic Brush Grip Rack",
       "displayTitle": "Ergonomic Brush Grip Rack",
-      "tagline": "Safe tip-down storage for ergonomic brush grips.",
+      "highlights": [
+        "Safe tip-down storage for brushes clamped inside of ergonomic brush grips.",
+        "Freestanding and wall mountable variants.",
+        "Good for drying expensive brushes after cleaning."
+      ],
       "uniqueModels": 2,
       "variants": 4,
       "makerworldUrl": null
@@ -64,7 +95,11 @@
       "slug": "wall-mount-drilling-guide",
       "name": "Wall Mount Drilling Guide",
       "displayTitle": "Wall Mount Drilling Guide",
-      "tagline": "Drilling guides for clean wall and pegboard mounting.",
+      "highlights": [
+        "Drilling guide for wall mount modules.",
+        "Guide is same width as full-sized rack modules.",
+        "Can be used to plan out layouts and pre-drill holes."
+      ],
       "uniqueModels": 8,
       "variants": 0,
       "makerworldUrl": null
@@ -72,8 +107,12 @@
     {
       "slug": "pro-acryl-expert-acrylics-paint-rack",
       "name": "Pro Acryl Expert Acrylics Paint Rack",
-      "displayTitle": "Pro Acryl Expert Acrylics Paint Rack",
-      "tagline": "Gridfinity-ready racks for Pro Acryl Expert Acrylics tubes.",
+      "displayTitle": "Expert Acrylics Paint Rack",
+      "highlights": [
+        "Racks designed to hold Monument Hobbies Pro Acryl Expert Acrylics paint tubes.",
+        "Infinite vertical stacking with dovetail keyed connector piece.",
+        "Freestanding, Gridfinity, and wall mount variants in 2-tube and 4-tube widths."
+      ],
       "uniqueModels": 2,
       "variants": 4,
       "makerworldUrl": null
@@ -82,7 +121,12 @@
       "slug": "all-in-one-paint-rack",
       "name": "All in One Paint Rack",
       "displayTitle": "All in One Paint Rack",
-      "tagline": "Mixed-bottle paint storage for active painting projects.",
+      "highlights": [
+        "Tiered paint rack that holds most popular miniature painting size classes in one rack.",
+        "Seamless left-right connections with rack connector piece.",
+        "Utilize with module risers to scale depth if desired.",
+        "Holds Citadel, Pro Acryl, AK, Vallejo, Army Painter, Golden, Scale 75, and many more!"
+      ],
       "uniqueModels": 4,
       "variants": 3,
       "makerworldUrl": null
@@ -90,8 +134,14 @@
     {
       "slug": "brush-rinse-station",
       "name": "Brush Rinse Station",
-      "displayTitle": "Brush Rinse Station",
-      "tagline": "A fully printable rinse basin with built-in scrub texture.",
+      "displayTitle": "3D Printed Brush Rinse Station",
+      "highlights": [
+        "Fully printable brush rinse station.",
+        "Divided wells for clean water.",
+        "Scrubbing surface for stubborn paint.",
+        "Waterproof verified for 7 days (I gave up after that) with PLA at provided print settings.", 
+        "PETG recommended for long-term use."
+      ],
       "uniqueModels": 1,
       "variants": 1,
       "makerworldUrl": null
@@ -100,7 +150,11 @@
       "slug": "blue-brush-rinse-station-dock",
       "name": "Blue Brush Rinse Station Dock",
       "displayTitle": "Blue Brush Rinse Station Dock",
-      "tagline": "Secure dock for the common square blue rinse cup.",
+      "highlights": [
+        "Secure dock designed for the common square blue brush rinse tub you probably already have.",
+        "Provides a secure way to keep it from sliding around.",
+        "Much bigger than the 3D printed version."
+      ],
       "uniqueModels": 1,
       "variants": 1,
       "makerworldUrl": null
@@ -109,7 +163,11 @@
       "slug": "meeden-dry-palette-dock",
       "name": "Meeden Dry Palette Dock",
       "displayTitle": "Meeden Dry Palette Dock",
-      "tagline": "A Gridfinity dock for the Meeden ceramic dry palette.",
+      "highlights": [
+        "Dock for the Meeden 7 well ceramic dry palette.",
+        "Textured nubs for drybrush testing/unloading a brush.",
+        "Can be used without the ceramic palette if you don't have one."
+      ],
       "uniqueModels": 1,
       "variants": 1,
       "makerworldUrl": null
@@ -118,7 +176,12 @@
       "slug": "basic-brush-rack",
       "name": "Basic Brush Rack",
       "displayTitle": "Basic Brush Rack",
-      "tagline": "Simple vertical brush storage with a removable magnetic lid.",
+      "highlights": [
+        "Simple hex patterned tip-up brush storage rack.",
+        "Compact and secure way to store bulk brushes or drybrushes.",
+        "Removable aligned lid, optionally magnetized with 6x2mm magnets.",
+        "Optional height spacer(s) can be added to customize the height."
+      ],
       "uniqueModels": 3,
       "variants": 1,
       "makerworldUrl": null
@@ -126,8 +189,12 @@
     {
       "slug": "ink-drybrush-pad-dock",
       "name": "Ink Drybrush Pad Dock",
-      "displayTitle": "Ink Drybrush Pad Dock",
-      "tagline": "Flexible docks for ink palettes and drybrush pads.",
+      "displayTitle": "Ink + Drybrush Pad Dock",
+      "highlights": [
+        "Docks with an 81mm circular cutout.",
+        "Securely holds \"TailaiMei Makeup Brush Color Remover\" tins (buy one for drybrushing and thank me later).",
+        "I also use it to hold \"Jucoan Ceramic Watercolor Palettes\" for thinning inks and washes I don't want on my wet palette."
+      ],
       "uniqueModels": 2,
       "variants": 2,
       "makerworldUrl": null
@@ -135,8 +202,11 @@
     {
       "slug": "drybrush-texture-pad-palette",
       "name": "Drybrush Texture Pad Palette",
-      "displayTitle": "Drybrush Texture Pad Palette",
-      "tagline": "Drybrush texture and dry palette utility in one module.",
+      "displayTitle": "Drybrush Texture Pad + Palette",
+      "highlights": [
+        "A simple texture pad for unloading your brush when drybrushing.",
+        "The concentric rings create sections that allow you to use it as a dry palette in a pinch."
+      ],
       "uniqueModels": 1,
       "variants": 1,
       "makerworldUrl": null
@@ -144,8 +214,12 @@
     {
       "slug": "module-storage-riser",
       "name": "Module Storage Riser",
-      "displayTitle": "Module Storage Riser",
-      "tagline": "Magnetic storage risers that lift and organize modules.",
+      "displayTitle": "Module Storage + Height Riser",
+      "highlights": [
+        "Magnetic storage risers that add extra height and usable storage to Gridfinity arrays.",
+        "Keyed alignment notches add stability when used in multiple orientations.",
+        "Large version is long enough to store extra brushes in."
+      ],
       "uniqueModels": 2,
       "variants": 0,
       "makerworldUrl": null

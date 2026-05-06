@@ -1,41 +1,28 @@
 import { ThemeToggle } from "@/components/app/theme-toggle"
-import clgIconUrl from "@/assets/brand/clg-192.png"
-import paintfinityLockupUrl from "@/assets/brand/paintfinity-watermark-clean.png"
+import { buttonVariants } from "@/components/ui/button"
+import paintfinityClgBannerUrl from "@/assets/brand/paintfinity-clg-banner-500x75.png"
 
 export function SiteHeader() {
   return (
     <div className="flex flex-col gap-4 border-b border-border/70 pb-4 sm:flex-row sm:items-center sm:justify-between">
-      <a
-        href="#"
-        className="flex max-w-max items-center gap-3"
-        aria-label="Paintfinity home"
-      >
-        <img
-          src={clgIconUrl}
-          alt=""
-          className="size-10 border border-border bg-background sm:size-12"
-          width="192"
-          height="192"
-        />
-        <img
-          src={paintfinityLockupUrl}
-          alt=""
-          className="h-auto w-44 sm:w-52"
-          width="2400"
-          height="700"
-        />
-      </a>
+      <img
+        src={paintfinityClgBannerUrl}
+        alt=""
+        className="h-auto w-64 max-w-full sm:w-80"
+        width="500"
+        height="75"
+      />
 
       <div className="flex flex-wrap items-center gap-3">
         <nav
-          className="type-label flex items-center gap-3 text-muted-foreground"
+          className="flex items-center gap-2"
           aria-label="Primary navigation"
         >
-          <a className="transition-colors hover:text-foreground/90" href="#modules">
+          <a className={buttonVariants({ variant: "selector", size: "sm" })} href="#modules">
             Modules
           </a>
           <a
-            className="transition-colors hover:text-foreground/90"
+            className={buttonVariants({ variant: "selector", size: "sm" })}
             href="https://makerworld.com/"
             target="_blank"
             rel="noreferrer"

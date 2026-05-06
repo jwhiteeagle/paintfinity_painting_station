@@ -26,13 +26,13 @@ export function HeroHeader({
   return (
     <section
       className={cn(
-        "mx-auto w-full border-b border-border/70 bg-muted/25 px-4 pt-4 pb-10 text-center shadow-xs sm:px-6 sm:pt-6 sm:pb-12 lg:pt-8 lg:pb-14",
+        "mx-auto w-full border-b border-border/70 bg-muted/5 px-4 pt-4 pb-10 text-center shadow-xs sm:px-6 sm:pt-6 sm:pb-12 lg:pt-8 lg:pb-14",
         className
       )}
     >
       <div className="grid gap-4 lg:grid-cols-[1fr_3fr_1fr] lg:items-stretch">
         {leftRail ? (
-          <aside className="order-2 border border-border/60 bg-background/70 p-4 text-left lg:order-1">
+          <aside className="order-2 border border-border/60 bg-card p-4 text-left lg:order-1">
             {leftRail}
           </aside>
         ) : null}
@@ -58,7 +58,7 @@ export function HeroHeader({
           ) : null}
 
           {children ? (
-            <div className="mt-8 w-full max-w-4xl rounded-none border border-border/60 bg-background/80 px-5 py-5 sm:px-8 sm:py-6">
+            <div className="mt-8 w-full max-w-4xl rounded-none border border-border/60 bg-card px-5 py-5 sm:px-8 sm:py-6">
               <div className="mx-auto max-w-3xl space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
                 {children}
               </div>
@@ -66,12 +66,14 @@ export function HeroHeader({
           ) : null}
 
           {actions ? (
-            <div className="mt-8 flex flex-wrap justify-center gap-2">{actions}</div>
+            <div className="mt-8 border border-primary/10 bg-linear-to-br from-primary/50 via-primary/5 to-secondary/50 p-4 text-center shadow-xs">
+              <div className="flex flex-wrap justify-center gap-2">{actions}</div>
+            </div>
           ) : null}
         </div>
 
         {rightRail ? (
-          <aside className="order-3 border border-border/60 bg-background/70 p-4 text-left">
+          <aside className="order-3 border border-border/60 bg-card p-4 text-left">
             {rightRail}
           </aside>
         ) : null}
