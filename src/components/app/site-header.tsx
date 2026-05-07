@@ -3,6 +3,10 @@ import { buttonVariants } from "@/components/ui/button"
 import clgBannerUrl from "@/assets/brand/CLG Banner 250x75.png"
 import paintfinityBannerUrl from "@/assets/brand/paintfinity-watermark-blue-250x75.png"
 
+const brandLinkClassName =
+  "block transition-opacity hover:opacity-85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+const navLinkClassName = buttonVariants({ variant: "selector" })
+
 export function SiteHeader() {
   return (
     <div className="flex flex-col gap-4 border-b border-border/70 pb-4 sm:flex-row sm:items-center sm:justify-between">
@@ -12,7 +16,7 @@ export function SiteHeader() {
           target="_blank"
           rel="noreferrer"
           aria-label="Open Chief Live Gaming"
-          className="block transition-opacity hover:opacity-85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          className={brandLinkClassName}
         >
           <img
             src={clgBannerUrl}
@@ -25,7 +29,7 @@ export function SiteHeader() {
         <a
           href="#modules"
           aria-label="Jump to Paintfinity modules"
-          className="block transition-opacity hover:opacity-85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          className={brandLinkClassName}
         >
           <img
             src={paintfinityBannerUrl}
@@ -43,18 +47,18 @@ export function SiteHeader() {
           aria-label="Primary navigation"
         >
           <a
-            className={buttonVariants({ variant: "selector" })}
+            className={navLinkClassName}
             href="https://chieflivegaming.com/gallery/"
             target="_blank"
             rel="noreferrer"
           >
             Some Stuff I've Painted
           </a>
-          <a className={buttonVariants({ variant: "selector" })} href="#modules">
+          <a className={navLinkClassName} href="#modules">
             Module List
           </a>
           <a
-            className={buttonVariants({ variant: "selector" })}
+            className={navLinkClassName}
             href="https://makerworld.com/"
             target="_blank"
             rel="noreferrer"

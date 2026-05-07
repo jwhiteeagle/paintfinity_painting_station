@@ -18,6 +18,10 @@ const contactEmail = "chieflivegaming@gmail.com";
 const moduleRequestMailto = `mailto:${contactEmail}?subject=Paintfinity%20module%20request`;
 const [contactEmailName, contactEmailDomain] = contactEmail.split("@");
 
+const railPanelClassName = "surface-gradient w-full p-4 text-center";
+const supportImageButtonClassName =
+  "w-full max-w-28 overflow-hidden border-secondary/90 shadow-md shadow-primary/25 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/30";
+
 function RailHeader({ children }: { children: React.ReactNode }) {
   return (
     <div className="surface-gradient-header flex min-h-15 items-center justify-center border px-4 py-4">
@@ -47,10 +51,10 @@ export default function App() {
             <div className="flex h-full flex-col gap-4">
               <RailHeader>Catalog</RailHeader>
               <div className="flex flex-1 flex-col justify-center gap-4">
-                <div className="surface-gradient w-full p-4 text-center">
+                <div className={railPanelClassName}>
                   <CatalogStats totals={moduleCatalog.totals} />
                 </div>
-                <div className="surface-gradient w-full p-4 text-center">
+                <div className={railPanelClassName}>
                   <p className="type-section-heading">
                     In development:
                   </p>
@@ -68,7 +72,7 @@ export default function App() {
             <div className="flex h-full flex-col gap-4">
               <RailHeader>Support</RailHeader>
               <div className="flex flex-1 flex-col justify-center gap-4">
-                <div className="surface-gradient w-full p-4 text-center">
+                <div className={railPanelClassName}>
                   <p className="type-body">
                     Paintfinity is 100% free. I made it as my way of sharing my knowledge and passion for miniature painting with others!
                     If you find my system useful, tell a fellow hobbyist about it!
@@ -84,7 +88,7 @@ export default function App() {
                       aria-label="Support Paintfinity with PayPal"
                       className={buttonVariants({
                         variant: "image",
-                        className: "w-full max-w-28 overflow-hidden border-secondary/90 shadow-md shadow-primary/25 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/30",
+                        className: supportImageButtonClassName,
                       })}
                     >
                       <img
@@ -100,7 +104,7 @@ export default function App() {
                       aria-label="Support Paintfinity with Buy Me a Coffee"
                       className={buttonVariants({
                         variant: "image",
-                        className: "w-full max-w-28 overflow-hidden border-secondary/90 shadow-md shadow-primary/25 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/30",
+                        className: supportImageButtonClassName,
                       })}
                     >
                       <img
@@ -111,7 +115,7 @@ export default function App() {
                     </a>
                   </div>
                 </div>
-                <div className="surface-gradient w-full p-4 text-center">
+                <div className={railPanelClassName}>
                   <p className="type-body">
                     Have a request for a new module?
                     <br />

@@ -2,6 +2,12 @@ import * as React from "react"
 
 import { Button } from "@/components/ui/button"
 
+const moduleCardClassName =
+  "group flex h-full flex-col overflow-hidden rounded-none border border-primary/85 bg-card text-card-foreground shadow-lg transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-2xl focus-within:-translate-y-1 focus-within:shadow-xl"
+const makerWorldButtonClassName =
+  "rounded-none border-primary bg-primary text-foreground/90 shadow-md shadow-primary/25"
+const enabledMakerWorldButtonClassName = `${makerWorldButtonClassName} ring-1 ring-primary/50 hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30`
+
 export type ModuleCardProps = {
   title: React.ReactNode
   highlights: string[]
@@ -16,9 +22,7 @@ export function ModuleCard({
   makerworldUrl,
 }: ModuleCardProps) {
   return (
-      <article
-        className="group flex h-full flex-col overflow-hidden rounded-none border border-primary/85 bg-card text-card-foreground shadow-lg transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-2xl focus-within:-translate-y-1 focus-within:shadow-xl"
-    >
+    <article className={moduleCardClassName}>
       <header className="surface-gradient-header flex min-h-15 items-center justify-center px-4 py-4 group-hover:border-primary/45 group-hover:from-primary/35 group-hover:to-secondary/40">
         <h3 className="type-card-title relative">{title}</h3>
       </header>
@@ -57,17 +61,12 @@ export function ModuleCard({
           <div className="mt-3 flex justify-center">
             {makerworldUrl ? (
               <a href={makerworldUrl} target="_blank" rel="noreferrer">
-                <Button
-                  className="rounded-none border-primary bg-primary text-foreground/90 ring-1 ring-primary/50 shadow-md shadow-primary/25 hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30"
-                >
+                <Button className={enabledMakerWorldButtonClassName}>
                   MakerWorld
                 </Button>
               </a>
             ) : (
-              <Button
-                className="rounded-none border-primary bg-primary text-foreground/90 shadow-md shadow-primary/25"
-                disabled
-              >
+              <Button className={makerWorldButtonClassName} disabled>
                 MakerWorld
               </Button>
             )}

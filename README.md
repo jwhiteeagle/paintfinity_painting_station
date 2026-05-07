@@ -2,17 +2,17 @@
 id: paintfinity_project_readme
 uri: jake://project/paintfinity/paintfinity_project_readme
 title: Paintfinity Painting Station
-description: Lightweight Bun React workspace for Paintfinity UI exploration and implementation.
+description: Lightweight Bun React workspace for Paintfinity SPA.
 workflow_origin: bun-boilerplate
 ---
 
-last_updated: "04-30-26"
+last_updated: "05-06-26"
 
 ## Paintfinity Painting Station
 
-This repository is the active Paintfinity static-site workspace. It explains the Paintfinity module system, routes downloads to off-site mirrors such as MakerWorld, and provides a lightweight support/donation path.
+This repository is the active Paintfinity SPA, vibe developed by Chief Live Gaming.
 
-## Deployed at
+## Deployed via Github pages with a subdomain target of:
 
 - `https://paintfinity.chieflivegaming.com/`
 
@@ -21,35 +21,10 @@ This repository is the active Paintfinity static-site workspace. It explains the
 - React
 - TypeScript
 - Tailwind v4
-- shadcn/ui primitives
-- curated external registries in `components.json`
-
-## Theme Workflow for my projects
-
-- Single stylesheet (index.css) defines tokens and helper tailwind utilities utilize them.
-- Components use utilities for lightweight and portable builds across projects.
-- Theme values are swapped per project while the component-facing token contract stays stable.
-- This keeps styling compatible with shadcn primitives and other future shadcn intake from registries.
+- shadcn + tweakcn frontend adoption strategy
 
 ## Data
 
-- `src/data/paintfinity-modules.json` stores module-card data and catalog counts for the static-site lane.
-- Detailed module descriptions, measurements, print guidance, licenses, and file payloads live on MakerWorld or other download mirrors.
+- `src/data/paintfinity-modules.json` stores module-card data and catalog counts to populate this SPAs helper tools and other backend trackers.
+- Detailed module descriptions and model files live on MakerWorld- this app just organizes and redirects.
 
-## GitHub Pages Deployment
-
-This repo is configured to deploy from GitHub Actions using:
-
-- `.github/workflows/deploy.yml`
-- Bun build output from `dist/`
-- GitHub Pages artifact upload + deploy actions
-
-Current automation touchpoints:
-
-- Pushes to `main` trigger the GitHub Pages deploy workflow.
-- Pull requests are validated by `pr-ci.yml` before merge.
-- Eligible Dependabot PRs can be auto-approved and auto-merged after passing CI.
-
-Subdomain target for this project:
-
-- `paintfinity.chieflivegaming.com`
