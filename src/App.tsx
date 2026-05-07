@@ -1,6 +1,6 @@
 import { AppShell } from "@/components/app/app-shell";
 import { CatalogStats } from "@/components/app/catalog-stats";
-import { DemoVideo } from "@/components/app/demo-video";
+import { GifPlayer } from "@/components/app/gif-player";
 import { HeroHeader } from "@/components/app/hero-header";
 import { ModuleCard } from "@/components/app/module-card";
 import { SectionContainer } from "@/components/app/section-container";
@@ -141,8 +141,9 @@ export default function App() {
         >
           <p>
             Hey. I'm Jake. I've been a full time commission miniature painter "professionally" for over a decade
-            now. I created Paintfinity as a passion project to share my love for miniature painting and try to make it accessible to more painters. 
-            My goal is a true one stop system that covers everything you might need for a variety of painting styles or project sizes. 
+            now. Paintfinity is a passion project with the goal of making miniature painting more accessible, efficient, and ergonomic.
+            There are some common pain points that everybody runs into, especially when you scale up your projects. 
+            I try to design models that work together to solve as many of those pain points as possible based on my own experiences with large projects.
           </p>
           <p>
             My system works best when utilized with Gridfinity, but it's not a requirement.
@@ -156,17 +157,15 @@ export default function App() {
               https://gridfinity.xyz/
             </a>
           </p>
-          
-          <p>
-            I've organized Paintfinity model sets into themed "modules" for quick navigation.
-            My entire module catalog prints with 0 supports and is optimized for a 0.4mm nozzle. Smooth bottom
-            NOGRID model variants are included for those who want to opt out of Gridfinity integration.
-          </p>
           <p className="text-lg font-bold text-foreground/75">
             Paintfinity is completely free!
-            No e-mail lists, no crowdfunding, no roadmaps. The entire system is available to download and use right now!
+            No crowdfunding or development roadmaps. No email lists or gated .stls. The whole project is free to download and ready to print right now!
           </p>
         </HeroHeader>
+      </SectionContainer>
+
+      <SectionContainer>
+        <GifPlayer gifUrl="/embeds/paintfinity-handle-demo-v1.gif" />
       </SectionContainer>
 
       <SectionContainer

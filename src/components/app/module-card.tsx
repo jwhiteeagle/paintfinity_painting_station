@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import { Button } from "@/components/ui/button"
+import { Button, buttonVariants } from "@/components/ui/button"
 
 const moduleCardClassName =
   "group flex h-full flex-col overflow-hidden rounded-none border border-primary/85 bg-card text-card-foreground shadow-lg transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-2xl focus-within:-translate-y-1 focus-within:shadow-xl"
@@ -60,10 +60,13 @@ export function ModuleCard({
           </p>
           <div className="mt-3 flex justify-center">
             {makerworldUrl ? (
-              <a href={makerworldUrl} target="_blank" rel="noreferrer">
-                <Button className={enabledMakerWorldButtonClassName}>
-                  MakerWorld
-                </Button>
+              <a
+                href={makerworldUrl}
+                target="_blank"
+                rel="noreferrer"
+                className={buttonVariants({ className: enabledMakerWorldButtonClassName })}
+              >
+                MakerWorld
               </a>
             ) : (
               <Button className={makerWorldButtonClassName} disabled>
