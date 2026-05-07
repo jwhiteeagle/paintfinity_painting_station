@@ -1,5 +1,8 @@
 import tailwindPlugin from "bun-plugin-tailwind"
-import { rm } from "node:fs/promises"
+import { existsSync } from "node:fs"
+import { cp, rm } from "node:fs/promises"
+
+const publicDir = "./public"
 
 const staticFiles = [
   { from: "CNAME", to: "CNAME" },
@@ -26,6 +29,11 @@ if (!result.success) {
     console.error(log)
   }
   process.exit(1)
+}
+
+if (existsSync(publicDir)) {
+  await cp(publicDir, "./dist", { recursive: true, force: true })
+  await rm("./dist/.gitkeep", { force: true })
 }
 
 for (const file of staticFiles) {

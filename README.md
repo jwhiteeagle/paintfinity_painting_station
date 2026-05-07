@@ -12,9 +12,13 @@ last_updated: "05-06-26"
 
 This repository is the active Paintfinity SPA, vibe developed by Chief Live Gaming.
 
+Detailed module descriptions and model file hosting handled by third party (MakerWorld), this app just organizes and redirects.
+
 ## Deployed via Github pages with a subdomain target of:
 
 - `https://paintfinity.chieflivegaming.com/`
+
+- The build script recursively copies `public/` into `dist/` for CDN-style embed assets. Example: `public/embeds/file-name-v1.gif` deploys to `https://paintfinity.chieflivegaming.com/embeds/file-name-v1.gif`.
 
 ## Stack
 
@@ -26,5 +30,3 @@ This repository is the active Paintfinity SPA, vibe developed by Chief Live Gami
 ## Data
 
 - `src/data/paintfinity-modules.json` stores module-card data and catalog counts to populate this SPAs helper tools and other backend trackers.
-- Detailed module descriptions and model files live on MakerWorld- this app just organizes and redirects.
-

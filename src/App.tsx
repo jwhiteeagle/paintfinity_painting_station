@@ -1,5 +1,6 @@
 import { AppShell } from "@/components/app/app-shell";
 import { CatalogStats } from "@/components/app/catalog-stats";
+import { DemoVideo } from "@/components/app/demo-video";
 import { HeroHeader } from "@/components/app/hero-header";
 import { ModuleCard } from "@/components/app/module-card";
 import { SectionContainer } from "@/components/app/section-container";
