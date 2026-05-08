@@ -12,17 +12,17 @@ const sectionClasses: Record<
   NonNullable<SectionContainerProps["variant"]>,
   string
 > = {
-  hero: "pt-0 pb-6",
-  moduleGrid: "py-6 scroll-mt-20",
+  hero: "pt-0 pb-4 sm:pb-6",
+  moduleGrid: "py-4 scroll-mt-20 sm:py-6",
 }
 
 const contentClasses: Record<
   NonNullable<SectionContainerProps["variant"]>,
   string
 > = {
-  hero: "space-y-6",
+  hero: "space-y-4 sm:space-y-6",
   moduleGrid:
-    "grid gap-4 rounded-none border border-border/60 bg-muted/25 p-5 sm:grid-cols-2 sm:p-6 lg:grid-cols-4",
+    "grid gap-3 rounded-none border border-border/60 bg-muted/25 p-3 sm:grid-cols-2 sm:gap-4 sm:p-6 lg:grid-cols-4",
 }
 
 export function SectionContainer({
@@ -33,7 +33,7 @@ export function SectionContainer({
   return (
     <section
       id={id}
-      className={cn("mx-auto w-full max-w-7xl px-4 sm:px-6", sectionClasses[variant])}
+      className={cn("mx-auto w-full max-w-7xl px-0 sm:px-6", sectionClasses[variant])}
     >
       <div className={cn(contentClasses[variant])}>{children}</div>
     </section>

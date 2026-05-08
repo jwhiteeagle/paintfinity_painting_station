@@ -17,7 +17,7 @@ type CatalogStatProps = {
 }
 
 const statLabelClassName = "type-label font-semibold text-muted-foreground"
-const statValueClassName = "type-data text-3xl"
+const statValueClassName = "type-data text-2xl sm:text-3xl"
 
 function CatalogStat({ label, value }: CatalogStatProps) {
   return (
@@ -34,7 +34,7 @@ function CatalogStat({ label, value }: CatalogStatProps) {
 
 export function CatalogStats({ totals }: CatalogStatsProps) {
   return (
-    <dl className="grid w-full grid-cols-1 gap-x-4 gap-y-5 sm:grid-cols-2 xl:grid-cols-1">
+    <dl className="grid w-full grid-cols-2 gap-x-3 gap-y-3 sm:gap-x-4 sm:gap-y-5 xl:grid-cols-1">
       <CatalogStat label="Paintfinity Modules:" value={totals.modules} />
       <CatalogStat label="Unique Models:" value={totals.uniqueModels} />
       <CatalogStat label="Model Variants:" value={totals.variants} />

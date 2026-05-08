@@ -19,15 +19,15 @@ const contactEmail = "chieflivegaming@gmail.com";
 const moduleRequestMailto = `mailto:${contactEmail}?subject=Paintfinity%20module%20request`;
 const [contactEmailName, contactEmailDomain] = contactEmail.split("@");
 
-const railPanelClassName = "surface-gradient w-full p-4 text-center";
+const railPanelClassName = "surface-gradient w-full p-3 text-center sm:p-4";
 const supportImageButtonClassName =
-  "w-full max-w-28 overflow-hidden border-secondary/90 shadow-md shadow-primary/25 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/30";
+  "w-full max-w-24 overflow-hidden border-secondary/90 shadow-md shadow-primary/25 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/30 sm:max-w-28";
 
 function RailHeader({ children }: { children: React.ReactNode }) {
   return (
-    <div className="surface-gradient-header flex min-h-15 items-center justify-center border px-4 py-4">
+    <div className="surface-gradient-header flex min-h-11 items-center justify-center border px-3 py-2 sm:min-h-15 sm:px-4 sm:py-4">
       <h2
-        className="relative font-display text-5xl leading-[0.95] tracking-[0.08em] text-foreground/95"
+        className="relative font-display text-2xl leading-[0.95] tracking-[0.08em] text-foreground/95 sm:text-5xl"
         style={{
           textShadow: "0 4px 0 rgb(0 0 0 / 0.8), -2px 3px 0 rgb(0 0 0 / 0.65)",
         }}
@@ -49,9 +49,9 @@ export default function App() {
           title="Paintfinity"
           tagline="A 3D printed miniature painting station"
           leftRail={
-            <div className="flex h-full flex-col gap-4">
+            <div className="flex h-full flex-col gap-3 sm:gap-4">
               <RailHeader>Catalog</RailHeader>
-              <div className="flex flex-1 flex-col justify-center gap-4">
+              <div className="flex flex-1 flex-col justify-center gap-3 sm:gap-4">
                 <div className={railPanelClassName}>
                   <CatalogStats totals={moduleCatalog.totals} />
                 </div>
@@ -70,9 +70,9 @@ export default function App() {
             </div>
           }
           rightRail={
-            <div className="flex h-full flex-col gap-4">
+            <div className="flex h-full flex-col gap-3 sm:gap-4">
               <RailHeader>Support</RailHeader>
-              <div className="flex flex-1 flex-col justify-center gap-4">
+              <div className="flex flex-1 flex-col justify-center gap-3 sm:gap-4">
                 <div className={railPanelClassName}>
                   <p className="type-body">
                     Paintfinity is 100% free. I made it as my way of sharing my knowledge and passion for miniature painting with others!
@@ -119,7 +119,6 @@ export default function App() {
                 <div className={railPanelClassName}>
                   <p className="type-body">
                     Have a request for a new module?
-                    <br />
                     Contact me here:
                   </p>
                   <p className="mt-2 type-data">
@@ -140,10 +139,9 @@ export default function App() {
           }
         >
           <p>
-            Hey. I'm Jake. I've been a full time commission miniature painter "professionally" for over a decade
-            now. Paintfinity is a passion project with the goal of making miniature painting more accessible, efficient, and ergonomic.
-            There are some common pain points that everybody runs into, especially when you scale up your projects. 
-            I try to design models that work together to solve as many of those pain points as possible based on my own experiences with large projects.
+             Hey, I'm Jake. I've been a full time commission miniature painter for over a decade.
+             Paintfinity is my solo run passion project with the goal of making miniature painting more accessible, efficient, and ergonomic. 
+             I try to design models that work together to solve as many common pain points as possible based on my experiences with large projects.   
           </p>
           <p>
             My system works best when utilized with Gridfinity, but it's not a requirement.
@@ -159,7 +157,7 @@ export default function App() {
           </p>
           <p className="text-lg font-bold text-foreground/75">
             Paintfinity is completely free!
-            No crowdfunding or development roadmaps. No email lists or gated .stls. The whole project is free to download and ready to print right now!
+            No crowdfunding, email lists, orgated .stls. The whole project is free to download and ready to print right now!
           </p>
         </HeroHeader>
       </SectionContainer>

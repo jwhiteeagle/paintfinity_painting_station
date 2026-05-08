@@ -23,7 +23,7 @@ export function ModuleCard({
 }: ModuleCardProps) {
   return (
     <article className={moduleCardClassName}>
-      <header className="surface-gradient-header flex min-h-15 items-center justify-center px-4 py-4 group-hover:border-primary/45 group-hover:from-primary/35 group-hover:to-secondary/40">
+      <header className="surface-gradient-header flex min-h-20 items-center justify-center px-4 py-4 group-hover:border-primary/45 group-hover:from-primary/35 group-hover:to-secondary/40">
         <h3 className="type-card-title relative">{title}</h3>
       </header>
 
