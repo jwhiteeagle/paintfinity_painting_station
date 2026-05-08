@@ -1,0 +1,21 @@
+#NoEnv 
+; #Warn 
+SendMode Input 
+SetWorkingDir %A_ScriptDir%  
+
+^!s::Suspend  ; Ctrl+Alt+S
+
+$F16::
+   tags := ["GRIDFINITY", "paintfinity", "miniature painting", "mini painting", "painting station", "art", "hobby", "hobby station", "painting", "organizer", "modular", "tabletop", "tabletop gaming", "wargaming", "rpg", "dnd", "gaming", "ergonomic", "accessory", "paint", "brush", "acrylic", "storage", "rack", "tray"]
+
+   For index, tag in tags
+   {
+     SendInput %tag%
+     Random, var, 123, 159
+     Sleep %var%
+     SendInput {Enter}
+     Random, var, 123, 159
+     Sleep %var%
+   }
+
+Return

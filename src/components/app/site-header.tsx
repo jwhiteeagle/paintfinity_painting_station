@@ -59,7 +59,7 @@ export function SiteHeader() {
           </a>
           <a
             className={navLinkClassName}
-            href="https://makerworld.com/"
+            href="https://makerworld.com/en/collections/17272977-paintfinity"
             target="_blank"
             rel="noreferrer"
           >

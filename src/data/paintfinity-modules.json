@@ -18,7 +18,7 @@
       ],
       "uniqueModels": 2,
       "variants": 4,
-      "makerworldUrl": null
+      "makerworldUrl": "https://makerworld.com/en/models/2771116-paintfinity-miniature-painting-handle#profileId-3078121"
     },
     {
       "slug": "mini-painting-toppers",
@@ -32,7 +32,7 @@
       ],
       "uniqueModels": 6,
       "variants": 12,
-      "makerworldUrl": null
+      "makerworldUrl": "https://makerworld.com/en/models/2771169-paintfinity-miniature-painting-handle-toppers#profileId-3078197"
     },
     {
       "slug": "mini-painting-handle-docks-and-trays",
@@ -48,7 +48,7 @@
       ],
       "uniqueModels": 10,
       "variants": 10,
-      "makerworldUrl": null
+      "makerworldUrl": "https://makerworld.com/en/models/2771334-paintfinity-mini-painting-handle-docks-and-trays#profileId-3078379"
     },
     {
       "slug": "bike-grip-mini-painting-handle",
@@ -62,7 +62,7 @@
       ],
       "uniqueModels": 6,
       "variants": 0,
-      "makerworldUrl": null
+      "makerworldUrl": "https://makerworld.com/en/models/2771441-paintfinity-bike-grip-mini-painting-handle#profileId-3078508"
     },
     {
       "slug": "ergonomic-brush-grip",
@@ -76,7 +76,7 @@
       ],
       "uniqueModels": 10,
       "variants": 4,
-      "makerworldUrl": null
+      "makerworldUrl": "https://makerworld.com/en/models/2772099-paintfinity-ergonomic-mini-painting-brush-grip#profileId-3079401"
     },
     {
       "slug": "ergonomic-brush-grip-rack",
@@ -89,7 +89,7 @@
       ],
       "uniqueModels": 2,
       "variants": 4,
-      "makerworldUrl": null
+      "makerworldUrl": "https://makerworld.com/en/models/2772155-paintfinity-ergonomic-paint-brush-grip-rack#profileId-3079474"
     },
     {
       "slug": "all-in-one-paint-rack",
@@ -103,21 +103,21 @@
       ],
       "uniqueModels": 4,
       "variants": 3,
-      "makerworldUrl": null
+      "makerworldUrl": "https://makerworld.com/en/models/2772002-paintfinity-all-in-one-miniature-paint-rack#profileId-3079274"
     },
     {
       "slug": "basic-brush-rack",
       "name": "Basic Brush Rack",
       "displayTitle": "Basic Brush Rack",
       "highlights": [
-        "Simple hex patterned tip-up brush storage rack.",
+        "Simple 16mm hex patterned tip-up brush storage rack.",
         "Compact and secure way to store bulk brushes or drybrushes.",
         "Removable aligned lid, optionally magnetized with 6x2mm magnets.",
         "Optional height spacer(s) can be added to customize the height."
       ],
       "uniqueModels": 3,
       "variants": 1,
-      "makerworldUrl": null
+      "makerworldUrl": "https://makerworld.com/en/models/2771909-paintfinity-modular-paint-brush-storage-rack#profileId-3079134"
     },
     {
       "slug": "pro-acryl-expert-acrylics-paint-rack",
@@ -130,7 +130,7 @@
       ],
       "uniqueModels": 2,
       "variants": 4,
-      "makerworldUrl": null
+      "makerworldUrl": "https://makerworld.com/en/models/2772183-paintfinity-pro-acryl-expert-acrylics-paint-rack#profileId-3079515"
     },
     {
       "slug": "drybrush-texture-pad-palette",
@@ -142,7 +142,7 @@
       ],
       "uniqueModels": 1,
       "variants": 1,
-      "makerworldUrl": null
+      "makerworldUrl": "https://makerworld.com/en/models/2772206-paintfinity-drybrush-texture-pad-palette#profileId-3079545"
     },
     {
       "slug": "brush-rinse-station",
@@ -152,12 +152,12 @@
         "Fully printable brush rinse station.",
         "Divided wells for clean water.",
         "Scrubbing surface for stubborn paint.",
-        "Waterproof verified for 7 days (I gave up after that) with PLA at provided print settings.",
+        "Waterproof verified for 5 days (I gave up after that) with PLA at provided print settings.",
         "PETG recommended for long-term use."
       ],
       "uniqueModels": 1,
       "variants": 1,
-      "makerworldUrl": null
+      "makerworldUrl": "https://makerworld.com/en/models/2772238-paintfinity-printed-paintbrush-rinse-station#profileId-3079589"
     },
     {
       "slug": "blue-brush-rinse-station-dock",
@@ -170,7 +170,7 @@
       ],
       "uniqueModels": 1,
       "variants": 1,
-      "makerworldUrl": null
+      "makerworldUrl": "https://makerworld.com/en/models/2772262-paintfinity-blue-brush-rinse-station-dock#profileId-3079620"
     },
     {
       "slug": "meeden-dry-palette-dock",
@@ -183,7 +183,7 @@
       ],
       "uniqueModels": 1,
       "variants": 1,
-      "makerworldUrl": null
+      "makerworldUrl": "https://makerworld.com/en/models/2772308-paintfinity-meeden-7well-paint-palette-dock#profileId-3079680"
     },
     {
       "slug": "ink-drybrush-pad-dock",
@@ -196,7 +196,7 @@
       ],
       "uniqueModels": 2,
       "variants": 2,
-      "makerworldUrl": null
+      "makerworldUrl": "https://makerworld.com/en/models/2772287-paintfinity-ink-drybrush-pad-scrub-storage-dock#profileId-3079647"
     },
     {
       "slug": "module-storage-riser",
@@ -209,20 +209,7 @@
       ],
       "uniqueModels": 2,
       "variants": 0,
-      "makerworldUrl": null
-    },
-    {
-      "slug": "wall-mount-drilling-guide",
-      "name": "Wall Mount Drilling Guide",
-      "displayTitle": "Wall Mount Drilling Guide",
-      "highlights": [
-        "Drilling guide for wall mount modules.",
-        "Guide is same width as full-sized rack modules.",
-        "Can be used to plan out layouts and pre-drill holes."
-      ],
-      "uniqueModels": 8,
-      "variants": 0,
-      "makerworldUrl": null
+      "makerworldUrl": "https://makerworld.com/en/models/2772328-paintfinity-module-storage-riser-for-gridfinity#profileId-3079710"
     }
   ]
 }
