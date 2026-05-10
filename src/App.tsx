@@ -139,12 +139,14 @@ export default function App() {
           }
         >
           <p>
-             Hey, I'm Jake. I've been a full time commission miniature painter for over a decade.
-             Paintfinity is my solo run passion project with the goal of making miniature painting more accessible, efficient, and ergonomic. 
-             I try to design models that work together to solve as many common pain points as possible based on my experiences with large projects.   
+             Hey, I'm Jake. I've been a full time commission miniature painter for the last 10 years. 
+             Paintfinity is my solo run passion project with the goal of bundling up all the little tips, 
+             tricks, and optimizations I've picked up over the years into a cohesive painting station.
+             I want to help more painters get into the hobby and try to take away some of the intimidation factor 
+             that can come with getting started on large armies or collections. 
           </p>
           <p>
-            My system works best when utilized with Gridfinity, but it's not a requirement.
+            My system works best when utilized with Gridfinity, but it's not required.
             Learn more about Gridfinity here:{" "}
             <a
               href="https://gridfinity.xyz/"
@@ -157,7 +159,7 @@ export default function App() {
           </p>
           <p className="text-lg font-bold text-foreground/75">
             Paintfinity is completely free!
-            No crowdfunding, email lists, orgated .stls. The whole project is free to download and ready to print right now!
+            No crowdfunding or gated model files- The whole project is free to download and ready to print right now!
           </p>
         </HeroHeader>
       </SectionContainer>
