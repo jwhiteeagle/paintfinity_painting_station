@@ -16,7 +16,7 @@ export function HeroHeader({
   rightRail,
 }: HeroHeaderProps) {
   return (
-    <section className="mx-auto w-full bg-muted/5 px-2 pt-2 pb-3 text-center shadow-xs sm:px-6 sm:pt-6 sm:pb-5 lg:pt-8 lg:pb-6">
+    <section className="mx-auto w-full bg-muted/5 px-2 pb-3 text-center shadow-xs sm:px-6 sm:pb-3 lg:pb-3">
       <div className="grid gap-3 sm:gap-4 md:grid-cols-2 md:items-stretch xl:grid-cols-4">
         {leftRail ? (
           <aside className="order-2 border border-border/60 bg-card p-3 text-left sm:p-4 xl:order-1 xl:col-span-1">
