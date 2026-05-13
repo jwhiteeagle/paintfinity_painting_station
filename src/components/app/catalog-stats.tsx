@@ -16,16 +16,13 @@ type CatalogStatProps = {
   value: React.ReactNode
 }
 
-const statLabelClassName = "type-label font-semibold text-muted-foreground"
-const statValueClassName = "type-data text-2xl sm:text-3xl"
-
 function CatalogStat({ label, value }: CatalogStatProps) {
   return (
     <div>
-      <dt className={statLabelClassName}>
+      <dt className="type-meta font-semibold text-muted-foreground">
         {label}
       </dt>
-      <dd className={statValueClassName}>
+      <dd className="font-mono text-2xl font-semibold text-foreground sm:text-3xl">
         {value}
       </dd>
     </div>

@@ -3,7 +3,7 @@ import clgBannerUrl from "@/assets/brand/CLG Banner 300x75.png"
 export function SiteFooter() {
   return (
     <div className="type-body border-t border-border/70 pt-5 text-center">
-      <div className="grid justify-items-center gap-5">
+      <div className="layout-stack items-center gap-5 sm:gap-5">
         <div className="max-w-3xl space-y-2">
           <p>
             Paintfinity models are designed and developed by Chief Live Gaming. All models are hosted for download on MakerWorld under their respective licenses.
@@ -25,7 +25,7 @@ export function SiteFooter() {
           </p>
         </div>
         <a
-          className="block transition-opacity hover:opacity-85"
+          className="interactive block transition-opacity hover:opacity-85"
           href="https://chieflivegaming.com/"
           target="_blank"
           rel="noreferrer"

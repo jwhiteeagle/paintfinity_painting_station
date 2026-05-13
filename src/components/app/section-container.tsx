@@ -20,7 +20,7 @@ const contentClasses: Record<
   NonNullable<SectionContainerProps["variant"]>,
   string
 > = {
-  hero: "space-y-4 sm:space-y-6",
+  hero: "layout-stack",
   moduleGrid:
     "grid gap-3 rounded-none border border-border/60 bg-muted/25 p-3 sm:grid-cols-2 sm:gap-4 sm:p-6 lg:grid-cols-4",
 }

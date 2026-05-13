@@ -6,11 +6,11 @@ description: Lightweight Bun React workspace for Paintfinity SPA.
 workflow_origin: bun-boilerplate
 ---
 
-last_updated: "05-06-26"
+last_updated: "05-13-26"
 
 ## Paintfinity Painting Station
 
-This repository is the active Paintfinity SPA, vibe developed by Chief Live Gaming.
+This repository is the active Paintfinity SPA vibe developed by Jake/Chief Live Gaming.
 
 Detailed module descriptions and model file hosting handled by third party (MakerWorld), this app just organizes and redirects.
 

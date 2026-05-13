@@ -2,12 +2,6 @@ import * as React from "react"
 
 import { Button, buttonVariants } from "@/components/ui/button"
 
-const moduleCardClassName =
-  "group flex h-full flex-col overflow-hidden rounded-none border border-primary/85 bg-card text-card-foreground shadow-lg transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-2xl focus-within:-translate-y-1 focus-within:shadow-xl"
-const makerWorldButtonClassName =
-  "rounded-none border-primary bg-primary text-foreground/90 shadow-md shadow-primary/25"
-const enabledMakerWorldButtonClassName = `${makerWorldButtonClassName} ring-1 ring-primary/50 hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30`
-
 export type ModuleCardProps = {
   title: React.ReactNode
   highlights: string[]
@@ -22,8 +16,8 @@ export function ModuleCard({
   makerworldUrl,
 }: ModuleCardProps) {
   return (
-    <article className={moduleCardClassName}>
-      <header className="surface-gradient-header flex min-h-20 items-center justify-center px-4 py-4 group-hover:border-primary/45 group-hover:from-primary/35 group-hover:to-secondary/40">
+    <article className="surface-card group flex h-full flex-col border-primary/85 shadow-lg transition-[transform,box-shadow] duration-200 ease-out hover:-translate-y-1 hover:shadow-2xl focus-within:-translate-y-1 focus-within:shadow-xl">
+      <header className="surface-gradient-emphasis layout-center min-h-20 px-4 py-4 group-hover:border-primary/45 group-hover:from-primary/35 group-hover:to-secondary/40">
         <h3 className="type-card-title relative">{title}</h3>
       </header>
 
@@ -43,7 +37,7 @@ export function ModuleCard({
       </div>
 
       <div className="flex flex-1 flex-col">
-        <div className="flex min-h-44 items-center px-5 py-4">
+        <div className="layout-center min-h-44 px-5 py-4">
           <ul className="w-full space-y-2 text-left text-xs leading-relaxed text-muted-foreground">
             {highlights.map((highlight) => (
               <li key={highlight} className="flex gap-2">
@@ -55,21 +49,27 @@ export function ModuleCard({
         </div>
 
         <div className="surface-gradient mt-auto min-h-20 border-x-0 border-b-0 border-t border-primary/20 px-6 py-4 text-center group-hover:from-primary/15 group-hover:to-secondary/35">
-          <p className="type-label text-muted-foreground">
+          <p className="type-meta text-muted-foreground">
             Download this module on:
           </p>
-          <div className="mt-3 flex justify-center">
+          <div className="layout-center mt-3">
             {makerworldUrl ? (
               <a
                 href={makerworldUrl}
                 target="_blank"
                 rel="noreferrer"
-                className={buttonVariants({ className: enabledMakerWorldButtonClassName })}
+                className={buttonVariants({
+                  className:
+                    "border-primary text-foreground/90 shadow-md shadow-primary/25 ring-1 ring-primary/50 hover:shadow-lg hover:shadow-primary/30",
+                })}
               >
                 MakerWorld
               </a>
             ) : (
-              <Button className={makerWorldButtonClassName} disabled>
+              <Button
+                className="border-primary text-foreground/90 shadow-md shadow-primary/25"
+                disabled
+              >
                 MakerWorld
               </Button>
             )}

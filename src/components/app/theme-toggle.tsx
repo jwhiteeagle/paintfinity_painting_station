@@ -1,3 +1,4 @@
+import { buttonVariants } from "@/components/ui/button"
 import { useTheme } from "@/components/app/theme-provider"
 import { cn } from "@/lib/utils"
 
@@ -7,18 +8,25 @@ const themeOptions = [
   { value: "system", label: "Use system theme", icon: SystemIcon },
 ] as const
 
+const iconButtonClassName = buttonVariants({
+  variant: "image",
+  className: "size-7 p-0 text-muted-foreground hover:bg-muted/70 hover:text-foreground lg:size-8",
+})
+
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme()
 
   return (
-    <div className="inline-flex items-center gap-2">
+    <div className="layout-center gap-2">
       <a
         href="https://github.com/jwhiteeagle/paintfinity_painting_station"
         target="_blank"
         rel="noreferrer"
         aria-label="Open Paintfinity repository on GitHub"
         title="Open Paintfinity repository on GitHub"
-        className="inline-flex size-7.5 items-center justify-center rounded-none border border-border bg-[#181717] text-white shadow-sm transition-colors hover:bg-[#181717]/85 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring lg:size-9"
+        className={buttonVariants({
+          className: "size-7.5 bg-[#181717] p-0 text-white hover:bg-[#181717]/85 hover:text-white lg:size-9",
+        })}
       >
         <GitHubIcon className="size-5.5" />
       </a>
@@ -35,7 +43,7 @@ export function ThemeToggle() {
               key={option.value}
               type="button"
               className={cn(
-                "inline-flex size-7 items-center justify-center rounded-none text-muted-foreground transition-colors hover:bg-muted/70 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring lg:size-8",
+                iconButtonClassName,
                 theme === option.value && "bg-primary text-primary-foreground shadow-xs"
               )}
               aria-label={option.label}

@@ -3,8 +3,6 @@ import { buttonVariants } from "@/components/ui/button"
 import clgBannerUrl from "@/assets/brand/CLG Banner 250x75.png"
 import paintfinityBannerUrl from "@/assets/brand/paintfinity-watermark-clean-250x75.png"
 
-const brandLinkClassName =
-  "block transition-opacity hover:opacity-85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
 const navLinkClassName = buttonVariants({
   variant: "selector",
   className:
@@ -13,14 +11,14 @@ const navLinkClassName = buttonVariants({
 
 export function SiteHeader() {
   return (
-    <div className="flex flex-col items-center gap-3 border-b border-border/70 pb-3 lg:flex-row lg:items-center lg:justify-between">
-      <div className="flex flex-nowrap items-center justify-center gap-2">
+    <div className="layout-cluster border-b border-border/70 pb-3 lg:flex-row lg:justify-between">
+      <div className="layout-center flex-nowrap gap-2">
         <a
           href="https://chieflivegaming.com/"
           target="_blank"
           rel="noreferrer"
           aria-label="Open Chief Live Gaming"
-          className={brandLinkClassName}
+          className="interactive block transition-opacity hover:opacity-85"
         >
           <img
             src={clgBannerUrl}
@@ -33,7 +31,7 @@ export function SiteHeader() {
         <a
           href="#modules"
           aria-label="Jump to Paintfinity modules"
-          className={brandLinkClassName}
+          className="interactive block transition-opacity hover:opacity-85"
         >
           <img
             src={paintfinityBannerUrl}
@@ -45,12 +43,12 @@ export function SiteHeader() {
         </a>
       </div>
 
-      <div className="flex flex-col items-center gap-3 lg:flex-row lg:gap-3">
+      <div className="layout-cluster lg:flex-row lg:gap-3">
         <div className="order-1 lg:order-2">
           <ThemeToggle />
         </div>
         <nav
-          className="order-2 flex flex-wrap items-center justify-center gap-1.5 lg:order-1 lg:gap-2"
+          className="layout-center order-2 flex-wrap gap-1.5 lg:order-1 lg:gap-2"
           aria-label="Primary navigation"
         >
           <a
