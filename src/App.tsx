@@ -122,7 +122,7 @@ export default function App() {
           </p>
           <p>
             My system works best when utilized with Gridfinity, but it's optional.
-            Learn more about Gridfinity and Zach's other projects here:{" "}
+            Learn more about Gridfinity and Zack's other projects here:{" "}
             <a
               href="https://gridfinity.xyz/"
               target="_blank"
