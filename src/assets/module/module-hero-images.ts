@@ -12,6 +12,7 @@ import miniPaintingHandleSplashUrl from "./mini-painting-handle-splash.png";
 import miniPaintingHandleDocksAndTraysSplashUrl from "./mini-painting-handle-docks-and-trays-splash.png";
 import miniPaintingToppersSplashUrl from "./mini-painting-toppers-splash.png";
 import moduleStorageRiserSplashUrl from "./module-storage-riser-splash.png";
+import primerAndMediumRackSplashUrl from "./primer-and-medium-rack-splash.png";
 import proAcrylExpertAcrylicsPaintRackSplashUrl from "./pro-acryl-expert-acrylics-paint-rack-splash.png";
 import wallMountDrillingGuideSplashUrl from "./wall-mount-drilling-guide-splash.png";
 
@@ -30,6 +31,7 @@ export const moduleHeroImages: Partial<Record<string, string>> = {
   "mini-painting-handle-docks-and-trays": miniPaintingHandleDocksAndTraysSplashUrl,
   "mini-painting-toppers": miniPaintingToppersSplashUrl,
   "module-storage-riser": moduleStorageRiserSplashUrl,
+  "primer-and-medium-rack": primerAndMediumRackSplashUrl,
   "pro-acryl-expert-acrylics-paint-rack": proAcrylExpertAcrylicsPaintRackSplashUrl,
   "wall-mount-drilling-guide": wallMountDrillingGuideSplashUrl,
 };

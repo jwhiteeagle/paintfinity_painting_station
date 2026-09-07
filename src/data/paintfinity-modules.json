@@ -1,9 +1,9 @@
 {
   "totals": {
     "modules": 16,
-    "uniqueModels": 61,
-    "variants": 48,
-    "totalModelsAndVariants": 109
+    "uniqueModels": 55,
+    "variants": 53,
+    "totalModelsAndVariants": 108
   },
   "modules": [
     {
@@ -60,8 +60,8 @@
         "Hollow design allows for adding weight.",
         "Recommended for more advanced users who want to customize their handles."
       ],
-      "uniqueModels": 6,
-      "variants": 0,
+      "uniqueModels": 7,
+      "variants": 4,
       "makerworldUrl": "https://makerworld.com/en/models/2771441-paintfinity-bike-grip-mini-painting-handle#profileId-3078508"
     },
     {
@@ -131,6 +131,19 @@
       "uniqueModels": 2,
       "variants": 4,
       "makerworldUrl": "https://makerworld.com/en/models/2772183-paintfinity-pro-acryl-expert-acrylics-paint-rack#profileId-3079515"
+    },
+    {
+      "slug": "primer-and-medium-rack",
+      "name": "Primer and Medium Rack",
+      "displayTitle": "Primer + Medium 120ml Bottle Rack",
+      "highlights": [
+        "Rack used to keep the 120ml bottles from Monument Hobbies organized and stable.",
+        "Tested with Primers, Newsh Medium, 1-step Special Sauce, and Glaze and Wash Medium.",
+        "~41mm cavity allows other similar sized bottles to fit for storage."
+      ],
+      "uniqueModels": 1,
+      "variants": 1,
+      "makerworldUrl": "https://makerworld.com/en/models/3255399-pro-acryl-monument-hobbies-primer-and-medium-rack#profileId-3689805"
     },
     {
       "slug": "drybrush-texture-pad-palette",
