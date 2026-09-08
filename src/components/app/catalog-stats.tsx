@@ -18,7 +18,7 @@ type CatalogStatProps = {
 
 function CatalogStat({ label, value }: CatalogStatProps) {
   return (
-    <div>
+    <div className="border border-primary/80 p-4">
       <dt className="type-meta font-semibold text-muted-foreground">
         {label}
       </dt>
@@ -33,8 +33,6 @@ export function CatalogStats({ totals }: CatalogStatsProps) {
   return (
     <dl className="grid w-full grid-cols-2 gap-x-3 gap-y-3 sm:gap-x-4 sm:gap-y-5 xl:grid-cols-1">
       <CatalogStat label="Paintfinity Modules:" value={totals.modules} />
-      <CatalogStat label="Unique Models:" value={totals.uniqueModels} />
-      <CatalogStat label="Model Variants:" value={totals.variants} />
       <CatalogStat
         label="Total Model Count:"
         value={totals.totalModelsAndVariants}
