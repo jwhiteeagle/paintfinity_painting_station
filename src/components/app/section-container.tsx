@@ -1,11 +1,13 @@
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
+import { SectionSurface } from "@/components/app/section-surface"
 
 export type SectionContainerProps = {
   children: React.ReactNode
-  variant?: "hero" | "moduleGrid"
+  variant?: "hero" | "moduleGrid" | "content"
   id?: string
+  heading?: React.ReactNode
 }
 
 const sectionClasses: Record<
@@ -13,7 +15,8 @@ const sectionClasses: Record<
   string
 > = {
   hero: "pt-0 pb-4 sm:pb-6",
-  moduleGrid: "py-4 scroll-mt-20 sm:py-6",
+  content: "py-3 sm:py-4",
+  moduleGrid: "py-4 sm:py-6",
 }
 
 const contentClasses: Record<
@@ -21,21 +24,33 @@ const contentClasses: Record<
   string
 > = {
   hero: "layout-stack",
+  content:
+    "surface-card type-body mx-auto flex w-full min-w-0 max-w-4xl flex-col gap-4 p-4 sm:gap-5 sm:p-5 [&_img]:max-w-full",
   moduleGrid:
-    "grid gap-3 rounded-none border border-border/60 bg-muted/25 p-3 sm:grid-cols-2 sm:gap-4 sm:p-6 lg:grid-cols-4",
+    "grid min-w-0 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4",
 }
 
 export function SectionContainer({
   children,
   variant = "hero",
   id,
+  heading,
 }: SectionContainerProps) {
   return (
     <section
       id={id}
       className={cn("mx-auto w-full max-w-7xl px-0 sm:px-6", sectionClasses[variant])}
     >
-      <div className={cn(contentClasses[variant])}>{children}</div>
+      {variant === "moduleGrid" ? (
+        <SectionSurface heading={heading}>
+          <div className={contentClasses[variant]}>{children}</div>
+        </SectionSurface>
+      ) : (
+        <div className={contentClasses[variant]}>
+          {heading}
+          {children}
+        </div>
+      )}
     </section>
   )
 }

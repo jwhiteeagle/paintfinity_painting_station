@@ -16,19 +16,28 @@ const staticFiles = [
 
 await rm("./dist", { recursive: true, force: true })
 
-const result = await Bun.build({
-  entrypoints: ["./index.html"],
-  target: "browser",
-  outdir: "./dist",
-  minify: true,
-  plugins: [tailwindPlugin],
-})
+// Build separately to avoid duplicate CSS outputs from the Tailwind HTML plugin.
+for (const entrypoint of [
+  "./index.html",
+  "./gridfinity/index.html",
+  // "./amazonlinks/index.html", // Unpublished; restore alongside the link in App.tsx.
+]) {
+  const result = await Bun.build({
+    entrypoints: [entrypoint],
+    root: ".",
+    publicPath: "/",
+    target: "browser",
+    outdir: "./dist",
+    minify: true,
+    plugins: [tailwindPlugin],
+  })
 
-if (!result.success) {
-  for (const log of result.logs) {
-    console.error(log)
+  if (!result.success) {
+    for (const log of result.logs) {
+      console.error(log)
+    }
+    process.exit(1)
   }
-  process.exit(1)
 }
 
 if (existsSync(publicDir)) {

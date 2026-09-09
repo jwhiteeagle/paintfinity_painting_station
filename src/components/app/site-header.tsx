@@ -29,7 +29,7 @@ export function SiteHeader() {
           />
         </a>
         <a
-          href="#modules"
+          href="/#modules"
           aria-label="Jump to Paintfinity modules"
           className="interactive block transition-opacity hover:opacity-85"
         >
@@ -63,7 +63,7 @@ export function SiteHeader() {
               I've Painted
             </span>
           </a>
-          <a className={navLinkClassName} href="#modules">
+          <a className={navLinkClassName} href="/#modules">
             <span>
               Module
               <br />

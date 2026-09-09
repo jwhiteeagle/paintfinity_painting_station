@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "bun --port 3005 index.html",
+    "dev": "bun --port 3005 index.html gridfinity/index.html amazonlinks/index.html",
     "build": "bun run ./scripts/build.ts",
     "typecheck": "bunx tsc --noEmit",
     "typecheck:scripts": "bunx tsc -p scripts/tsconfig.json --noEmit",

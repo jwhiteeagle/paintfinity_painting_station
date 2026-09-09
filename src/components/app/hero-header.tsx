@@ -1,5 +1,7 @@
 import * as React from "react"
 
+import { SectionLabel } from "@/components/app/section-label"
+
 export type HeroHeaderProps = {
   title?: React.ReactNode
   subtitle?: React.ReactNode
@@ -12,6 +14,7 @@ export type HeroHeaderProps = {
 export type HeroRailProps = {
   title?: React.ReactNode
   subtitle?: React.ReactNode
+  href?: string
   children: React.ReactNode
 }
 
@@ -19,17 +22,15 @@ export type HeroRailPanelProps = {
   children: React.ReactNode
 }
 
-export function HeroRail({ subtitle, title, children }: HeroRailProps) {
+export function HeroRail({ subtitle, title, href, children }: HeroRailProps) {
   return (
     <div className="layout-stack gap-3 sm:gap-4">
-      <div className="surface-gradient-emphasis layout-center min-h-11 border px-3 py-2 sm:min-h-15 sm:px-4 sm:py-4">
-        <h2 className="type-card-title relative sm:text-5xl">
-          {title}
-        </h2>
-        <h3 className="type-card-title relative sm:text-2xl">
-          {subtitle}
-        </h3>
-      </div>
+      {title != null && (
+        <SectionLabel variant="title" href={href}>{title}</SectionLabel>
+      )}
+      {subtitle != null && (
+        <SectionLabel variant="subtitle" href={href}>{subtitle}</SectionLabel>
+      )}
       <div className="layout-stack justify-start gap-3 sm:gap-4">
         {children}
       </div>

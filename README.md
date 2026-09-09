@@ -20,6 +20,15 @@ Detailed module descriptions and model file hosting handled by third party (Make
 
 - The build script recursively copies `public/` into `dist/` for CDN-style embed assets. Example: `public/embeds/file-name-v1.gif` deploys to `https://paintfinity.chieflivegaming.com/embeds/file-name-v1.gif`.
 
+## Pages and Local Preview
+
+- `/` uses `index.html` and `src/main.tsx` for the landing page.
+- `/gridfinity/` uses `gridfinity/index.html`, `src/gridfinity.tsx`, and `src/pages/gridfinity.tsx`.
+- `/amazonlinks/` uses `amazonlinks/index.html`, `src/amazonlinks.tsx`, and `src/pages/amazonlinks.tsx`.
+- Content pages share `SectionContainer` with `variant="content"`, the site header/footer, and theme provider.
+- `bun run dev` serves all three entries on port `3005`. Restart an existing dev process after changing the entry list.
+- `bun run build` bundles each HTML entry separately into `dist`, preserving page directories and root-relative asset URLs. The existing GitHub Pages workflow publishes the whole directory.
+
 ## Stack
 
 - React

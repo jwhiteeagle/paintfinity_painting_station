@@ -1,15 +1,18 @@
+import { useEffect } from "react";
+import { ContentImage } from "@/components/app/content-image";
+import handleViewUrl from "@/assets/handle-view.png";
+import overviewsUrl from "@/assets/overviews.png";
 import { AppShell } from "@/components/app/app-shell";
 import { CatalogStats } from "@/components/app/catalog-stats";
-import { GifPlayer } from "@/components/app/gif-player";
 import { HeroHeader, HeroRail, HeroRailPanel } from "@/components/app/hero-header";
 import { ModuleCard } from "@/components/app/module-card";
 import { SectionContainer } from "@/components/app/section-container";
 import { SiteFooter } from "@/components/app/site-footer";
 import { SiteHeader } from "@/components/app/site-header";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { TextEmphasis } from "@/components/ui/text-emphasis";
 import buyMeCoffeeButtonUrl from "@/assets/buymecoffee-560x280.png";
-import gridfinityDemoUrl from "@/assets/gridfinity_demo.webp";
-import gridfinityBinsDemoUrl from "@/assets/gridfinity_demo_1.webp";
 import { moduleHeroImages } from "@/assets/module/module-hero-images";
 import paypalButtonUrl from "@/assets/paypal-560x280.png";
 import moduleCatalog from "@/data/paintfinity-modules.json";
@@ -21,6 +24,13 @@ const moduleRequestMailto = `mailto:${contactEmail}?subject=Paintfinity%20module
 const [contactEmailName, contactEmailDomain] = contactEmail.split("@");
 
 export default function App() {
+  useEffect(() => {
+    // Cross-page links arrive before React has mounted the module grid.
+    if (window.location.hash === "#modules") {
+      document.getElementById("modules")?.scrollIntoView({ block: "start" });
+    }
+  }, []);
+
   return (
     <AppShell
       header={<SiteHeader />}
@@ -32,28 +42,15 @@ export default function App() {
           tagline="A 3D printed miniature painting station"
           leftRail={
             <div className="layout-stack gap-3 sm:gap-4">
-              <HeroRail title="Catalog">
+              <HeroRail title="Catalog" href="#modules">
                 <HeroRailPanel>
                   <CatalogStats totals={moduleCatalog.totals} />
                 </HeroRailPanel>
-                <HeroRailPanel>
-                  <p className="type-meta text-lg font-semibold text-foreground">
-                    In development:
-                  </p>
-                  <p className="mt-3 type-body">
-                    - Airbrush Stand
-                  </p>
-                  <p className="type-body">
-                    - Multiboard hanging adapter
-                  </p>
-                </HeroRailPanel>
+                
               </HeroRail>
               <HeroRail title="Support">
                 <HeroRailPanel>
-                  <p className="type-body">
-                    If you find Paintfinity useful, please consider telling a fellow hobbyist about it!
-                    <br />
-                    <br />
+                  <p>                  
                     If you'd like to support the ongoing development of Paintfinity with a monetary donation, use one of my virtual tip jars below!
                   </p>
                   <div className="mt-4 grid grid-cols-[repeat(auto-fit,minmax(4.75rem,1fr))] justify-items-center gap-3">
@@ -93,86 +90,139 @@ export default function App() {
                     </a>
                   </div>
                 </HeroRailPanel>
+
+                <HeroRail title= "Contact">
                 <HeroRailPanel>
-                  <p className="type-body">
-                    Have a request for a new module?
+                  <p>
+                    Have a request for a new module? Want to give feedback or report a bug?
+                    <br />
                     Contact me here:
                   </p>
                   <p className="mt-2 font-mono text-xs font-semibold text-foreground">
                     {contactEmailName}
-                    <br />
                     @{contactEmailDomain}
                   </p>
                   <a
                     href={moduleRequestMailto}
-                    className="mt-3 inline-flex"
+                    className={cn(buttonVariants({ variant: "inverted" }), "mt-3")}
                     aria-label="Email Chief Live Gaming with a Paintfinity module request"
                   >
-                    <Button variant="inverted">Contact</Button>
+                    Contact
                   </a>
                 </HeroRailPanel>
+              </HeroRail>
               </HeroRail>
             </div>
           }
           
           rightRail={
-            <HeroRail title="What's Gridfinity?">
-              <HeroRailPanel>
-                <div className="layout-stack gap-3 sm:gap-4">
-                  <p className="type-body">
-                    Gridfinity starts with baseplates. They can be printed in any size you need and have optional slots for magnets.I used some hot glue to stick them down to my desktop. Many baseplates connected together can form a large modular grid for organizing your workspace!
-                  </p>
-                  <img
-                    src={gridfinityDemoUrl}
-                    alt="Gridfinity baseplate demo"
-                    loading="lazy"
-                    className="mx-auto block aspect-square w-full max-w-40 border border-primary/50 bg-muted/10 object-contain"
-                  />
-                  <p className="type-body">
-                    The bottoms of all my modules have spots for magnets to be embedded. This allows you to securely move things around within your baseplate grid. If you have a large batch painting project, you can move entire squads of minis on trays and keep them safe and organized at the same time!
-                  </p>
-                  <img
-                    src={gridfinityBinsDemoUrl}
-                    alt="Gridfinity bins and baseplate demo"
-                    loading="lazy"
-                    className="mx-auto block aspect-square w-full max-w-40 border border-primary/50 bg-muted/10 object-contain"
-                  />
-                  <p className="type-body">
-                    Learn more about Gridfinity and Zack's other projects here:{" "}
-                    <a
-                      href="https://gridfinity.xyz/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="underline underline-offset-4"
-                    >
-                      https://gridfinity.xyz/
-                    </a>
-                  </p>
-                </div>
-              </HeroRailPanel>
-            </HeroRail>
+            <div className="layout-stack gap-3 sm:gap-4">
+              <HeroRail subtitle="What's Gridfinity?" href="/gridfinity">
+                <HeroRailPanel>
+                  <div className="space-y-3 sm:space-y-4">
+                    <p>
+                      My models work alongside <TextEmphasis>Gridfinity</TextEmphasis>, a modular storage system designed by Zack Freedman. Paintfinity is fully compatible under the standard GFU, so you can add any of the countless other useful Gridfinity compatible designs right alongside mine.
+                    </p>
+                    <p>
+                      Don't want to use Gridfinity? No problem, I made flat bottom variants for all my designs too!
+                    </p>
+                    <div className="flex justify-center items-center flex-wrap gap-3">
+                      <a
+                        href="/gridfinity"
+                        className={cn(
+                          buttonVariants({ variant: "inverted" }),
+                          "h-auto max-w-full whitespace-normal py-2 text-center"
+                        )}
+                      >
+                        Gridfinity Basics Overview
+                      </a>
+                    </div>
+                  </div>
+                </HeroRailPanel>
+              </HeroRail>
+              <HeroRail title="Ergonomics">
+                <HeroRailPanel>
+                  <p>
+                    After painting commission projects hours a day for over a decade, I started to develop some hand and wrist issues that I couldn't ignore.  
+                    <br />
+                    <br />
+                    I learned the importance of ergonomics and varied movements when painting. Small adjustments and considerations go a long way,  and always make small ergonomic considerations with my designs where possible. 
+                  </p>  
+                </HeroRailPanel>
+              </HeroRail>
+
+              {/* Amazon Links is unpublished. Restore this block and its build entry when ready.
+              <SectionLabel variant="title" href="/amazonlinks">
+                Amazon Links
+              </SectionLabel>
+              <p className="type-body">Find supplies and accessories for your Paintfinity setup.</p>
+              */}
+            </div>
           }
         >
-          <p>
-             Paintfinity is my solo run passion project I started to try to make useful 3d printable accessories for miniature painters. My entire system is 100% free with no paid content, mailing lists, or subscriptions. I am always expanding the catalog of modules and welcome any feedback or requests for new modules!
-          </p>
-          <p>  
-             I try to focus on organization and efficiency with my designs. Everything in Paintfinity is modular, start with something you find useful and expand at any time.
-          </p>
-          <p>
-             My models were designed from the start to work alongside Gridfinity, a modular storage system designed by Zack Freedman. All of my designs also have flat bottom variants for those who prefer not to use Gridfinity. 
-          </p>
-          <p>
-             A big benefit of my system is it's scalability. Utilizing my weighted painting handles and their magnetized toppers allow batch painting to be done with ease. I have docks for both handles and toppers, as well as trays with carrying handles for moving entire squads of minis around your workspace while keeping them safe and organized.  
-          </p>
-          
-          <GifPlayer gifUrl="/embeds/paintfinity-handle-demo-v1.gif" />
+          {/* One: introduction */}
+          <div className="space-y-3 sm:space-y-4">
+            <p>
+              Paintfinity is my solo run passion project to make useful 3d printable accessories for miniature painters. My entire system is <TextEmphasis>completely free</TextEmphasis> with no paid content, mailing lists, or subscriptions. I am always expanding the catalog and welcome feedback or requests for new modules!
+            </p>
+            <p>
+              I focus on organization and efficiency with my designs. Everything in Paintfinity is modular, start with something you find useful and expand at any time! It's designed to be highly customizable to your own workflow and painting style.
+            </p>
+          </div>
+
+          <div className="@container w-full min-w-0">
+            <div className="grid grid-cols-1 items-start gap-x-1 gap-y-4 @min-[480px]:grid-cols-2">
+              <ContentImage
+                src={handleViewUrl}
+                alt="Mini painting handle and accessories"
+                aspect="landscape"
+                caption="My Mini Painting Handle and accessories"
+                maxWidth={800}
+              />
+              <ContentImage
+                src={overviewsUrl}
+                alt="Paintfinity accessories overview"
+                aspect="landscape"
+                caption="Wide range of accessories for your painting workflow"
+                maxWidth={800}
+              />
+            </div>
+          </div>
+
+          {/* Three: batch painting and demo */}
+          <div className="space-y-3 sm:space-y-4">
+            <h4 className="text-center text-lg font-semibold text-foreground underline underline-offset-4">
+              Batch Painting Friendly
+            </h4>
+            <p>
+              A big benefit of Paintfinity is it's scalability. It has storage docks and trays for both painting handles and toppers to keep models protected and your project organized. Swapping models off of one handle or having a dedicated handle under each mini is supported at scale.
+            </p>
+            
+          </div>
         </HeroHeader>
       </SectionContainer>
 
       <SectionContainer
         variant="moduleGrid"
         id="modules"
+        heading={
+          <div className="flex flex-col gap-3">
+            <h2 className="type-display text-center text-8xl sm:text-6xl">
+              Paintfinity Modules
+            </h2>
+            <div className="flex flex-col items-center justify-center gap-2 text-center">
+              <p>View the full model collection on MakerWorld, or find links to individual modules below</p>
+              <a
+                href="https://makerworld.com/en/collections/17272977-paintfinity"
+                target="_blank"
+                rel="noreferrer"
+                className={buttonVariants({ variant: "inverted" })}
+              >
+                MakerWorld Collection
+              </a>
+            </div>
+          </div>
+        }
       >
         {moduleCatalog.modules.map((module) => (
           <ModuleCard

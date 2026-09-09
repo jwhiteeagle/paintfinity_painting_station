@@ -259,6 +259,10 @@
 
 /* ** CLG Baseline Utilities - typography ** */
 
+@utility text-emphasis {
+  @apply font-bold underline underline-offset-4;
+}
+
 @utility type-display {
   font-family: var(--font-display);
   letter-spacing: 0;
