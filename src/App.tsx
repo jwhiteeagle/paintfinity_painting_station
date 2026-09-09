@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { ContentImage } from "@/components/app/content-image";
 import handleViewUrl from "@/assets/handle-view.png";
+import brushGripUrl from "@/assets/brush-grip-1.png";
 import overviewsUrl from "@/assets/overviews.png";
 import { AppShell } from "@/components/app/app-shell";
 import { CatalogStats } from "@/components/app/catalog-stats";
@@ -147,7 +148,16 @@ export default function App() {
                     <br />
                     <br />
                     I learned the importance of ergonomics and varied movements when painting. Small adjustments and considerations go a long way,  and always make small ergonomic considerations with my designs where possible. 
-                  </p>  
+                  </p>
+                  <div className="mt-3 sm:mt-4">
+                    <ContentImage
+                      src={brushGripUrl}
+                      alt="Paintfinity ergonomic brush grip"
+                      aspect="wide"
+                      maxWidth={220}
+                      zoomable
+                    />
+                  </div>
                 </HeroRailPanel>
               </HeroRail>
 
@@ -172,14 +182,14 @@ export default function App() {
 
           <div className="@container w-full min-w-0">
             <div className="grid grid-cols-1 items-start gap-x-1 gap-y-4 @min-[480px]:grid-cols-2">
-              <ContentImage
+              <ContentImage zoomable
                 src={handleViewUrl}
                 alt="Mini painting handle and accessories"
                 aspect="landscape"
                 caption="My Mini Painting Handle and accessories"
                 maxWidth={800}
               />
-              <ContentImage
+              <ContentImage zoomable
                 src={overviewsUrl}
                 alt="Paintfinity accessories overview"
                 aspect="landscape"
@@ -207,7 +217,7 @@ export default function App() {
         id="modules"
         heading={
           <div className="flex flex-col gap-3">
-            <h2 className="type-display text-center text-8xl sm:text-6xl">
+            <h2 className="type-display text-center text-5xl sm:text-5xl">
               Paintfinity Modules
             </h2>
             <div className="flex flex-col items-center justify-center gap-2 text-center">

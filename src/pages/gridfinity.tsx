@@ -18,13 +18,13 @@ export default function GridfinityPage() {
           I used some hot glue to stick them down to my desktop. Many baseplates connected together can form a large modular grid for organizing your workspace!
         </p>
         <div className="mx-auto grid w-full max-w-116 grid-cols-1 items-start gap-6 sm:grid-cols-2">
-          <ContentImage
+          <ContentImage zoomable
             src={gridfinityDemoUrl}
             alt="Gridfinity baseplate demo"
             caption="Baseplates form a grid, magents are optional."
             maxWidth={220}
           />
-          <ContentImage
+          <ContentImage zoomable
             src={gridfinityBinsDemoUrl}
             alt="Gridfinity bins and baseplate demo"
             caption="Modules fit securely on baseplates with magnets."

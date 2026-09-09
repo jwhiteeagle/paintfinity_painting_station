@@ -11,10 +11,9 @@
       "name": "Mini Painting Handle",
       "displayTitle": "Mini Painting Handle",
       "highlights": [
-        "Simple mini painting handle with a few extras. Batch painting friendly.",
-        "Threaded 2-piece handle with a hollow cavity for adding weight.",
-        "Adding weight (optional) increases stability significantly with heavier models.",
-        "Optional magnets on both ends interface with different model toppers, trays, and docks."
+        "Miniature painting handle with magnetic top and bottom end with multiple magnet options.",
+        "Threaded 2-piece hollow handle for adding weight.",
+        "Tuned to be fast to print. No assembly or clamping mechanisms. Just print and paint."
       ],
       "uniqueModels": 2,
       "variants": 4,
@@ -25,10 +24,10 @@
       "name": "Mini Painting Toppers",
       "displayTitle": "Mini Painting Handle Toppers",
       "highlights": [
-        "Toppers are designed to attach magnetically to the top of the mini painting handle.",
-        "Models can be secured to toppers with poster putty, hot glue (my favorite), museum wax, etc.",
-        "Preset holes can be drilled out to desired sizes for pinning models directly to the topper.",
-        "Multiple sizes and styles, rounds are optimized to print faster."
+        "Toppers are the platform to secure your model and magnetize to the top of the mini painting handle.",
+        "Models need to be secured to toppers with poster putty, hot glue (my favorite), museum wax, etc.",
+        "Preset holes can be drilled out for pinning models directly to the topper.",
+        "Thumb grooves allow easy rotation of the model while painting."
       ],
       "uniqueModels": 6,
       "variants": 12,
@@ -39,12 +38,10 @@
       "name": "Mini Painting Handle Docks and Trays",
       "displayTitle": "Mini Painting Handle Docks + Trays",
       "highlights": [
-        "A collection of models designed to hold painting handles and toppers securely when not in use.",
-        "Docks and Trays (Docks with built-in carrying handles) available in multiple sizes.",
-        "Keep models organized and protected while painting.",
-        "Allows for efficient workflows that scale up with your project.",
-        "Every model can get its own topper while the painter swaps toppers onto a single handle.",
-        "Every model can get a full topper + handle setup, letting the painter swap models easily with one hand."
+        "Docks and Trays (Docks with carrying handles) available in multiple sizes.",
+        "Designed for bulk toppers OR handles to match your painting workflow.",
+        "Allows for bulk 'models on their own handle' painting styles-- Dock prevents tipping from accidental bumps.",
+        "Cell phone magnet plate (optional) in the handle docks allow a nearly un-tippable home for models on a handle"
       ],
       "uniqueModels": 10,
       "variants": 10,
@@ -56,8 +53,8 @@
       "displayTitle": "Bike Grip Mini Painting Handle",
       "highlights": [
         "Comfort-focused painting handle core designed to fit inside most bicycle handlebar grips.",
-        "Utilizes all the same toppers, trays, and docks as the standard mini painting handle.",
-        "Hollow design allows for adding weight.",
+        "Utilizes all the same toppers, trays, and docks as the fully 3d printed handle.",
+        "Fun handlebar grip shapes allow built in brush/wrist support.",
         "Recommended for more advanced users who want to customize their handles."
       ],
       "uniqueModels": 7,
@@ -69,10 +66,10 @@
       "name": "Ergonomic Brush Grip",
       "displayTitle": "Ergonomic Brush Grip",
       "highlights": [
-        "2-piece design with non-marring clamping collet.",
-        "Fits a wide range of brush handle sizes and shapes.",
-        "Larger grip surface area allows for more varied grips and better control - helps reduce hand strain.",
-        "Optional magnet for secure tip-down brush storage in racks."
+        "2 piece brush grip that threads around a brush handle with non-marring clamping collet.",
+        "Larger grip surface area allows for more varied grips - helps reduce hand strain.",
+        "Optional magnet for secure tip-down brush storage in racks.",
+        "Can be bulky and tough to get used to, but provides many ergonomic benefits."
       ],
       "uniqueModels": 10,
       "variants": 4,
@@ -83,9 +80,9 @@
       "name": "Ergonomic Brush Grip Rack",
       "displayTitle": "Ergonomic Brush Grip Rack",
       "highlights": [
-        "Safe tip-down storage for brushes clamped inside of ergonomic brush grips.",
+        "Safe tip-down storage for brushes inside of ergonomic brush grips.",
         "Freestanding and wall mountable variants.",
-        "Good for drying expensive brushes after cleaning."
+        "Optional magnets allow sturdy brush transportation around your workspace."
       ],
       "uniqueModels": 2,
       "variants": 4,
@@ -96,9 +93,9 @@
       "name": "All in One Paint Rack",
       "displayTitle": "All in One Paint Rack",
       "highlights": [
-        "Tiered paint rack that holds most popular miniature painting size classes in one rack.",
-        "Seamless left-right connections with rack connector piece.",
-        "Utilize with module risers to scale depth if desired.",
+        "Holds most major miniature paint bottles in a compact footprint.",
+        "Seamless left-right connections of multiple racks with rack connector piece.",
+        "Combine racks with module risers to scale multiple racks deep seamlessly. (Racks on racks on racks?)",
         "Holds Citadel, Pro Acryl, AK, Vallejo, Army Painter, Golden, Scale 75, and many more!"
       ],
       "uniqueModels": 4,
@@ -110,10 +107,10 @@
       "name": "Basic Brush Rack",
       "displayTitle": "Basic Brush Rack",
       "highlights": [
-        "Simple 16mm hex patterned tip-up brush storage rack.",
-        "Compact and secure way to store bulk brushes or drybrushes.",
+        "16mm hex patterned tip-up brush storage rack.",
+        "Compact and secure way to store bulk brushes or tools.",
         "Removable aligned lid, optionally magnetized with 6x2mm magnets.",
-        "Optional height spacer(s) can be added to customize the height."
+        "Optional height spacer(s) can be added to customize height."
       ],
       "uniqueModels": 3,
       "variants": 1,
@@ -137,7 +134,7 @@
       "name": "Primer and Medium Rack",
       "displayTitle": "Primer + Medium 120ml Bottle Rack",
       "highlights": [
-        "Rack used to keep the 120ml bottles from Monument Hobbies organized and stable.",
+        "Rack used to keep 120ml bottles from Monument Hobbies organized on you bench.",
         "Tested with Primers, Newsh Medium, 1-step Special Sauce, and Glaze and Wash Medium.",
         "~41mm cavity allows other similar sized bottles to fit for storage."
       ],
@@ -179,7 +176,7 @@
       "highlights": [
         "Secure dock designed for the common square blue brush rinse tub you probably already have.",
         "Provides a secure way to keep it from sliding around.",
-        "Much bigger than the 3D printed version."
+        "Much bigger than the fully 3D printed version and the better long term solution."
       ],
       "uniqueModels": 1,
       "variants": 1,
@@ -192,7 +189,7 @@
       "highlights": [
         "Dock for the Meeden 7 well ceramic dry palette.",
         "Textured nubs for drybrush testing/unloading a brush.",
-        "Can be used without the ceramic palette if you don't have one."
+        "Can be used without the ceramic palette in a pinch."
       ],
       "uniqueModels": 1,
       "variants": 1,
@@ -204,8 +201,8 @@
       "displayTitle": "Ink + Drybrush Pad Dock",
       "highlights": [
         "Docks with an 81mm circular cutout.",
-        "Securely holds \"TailaiMei Makeup Brush Color Remover\" tins (buy one for drybrushing and thank me later).",
-        "I also use it to hold \"Jucoan Ceramic Watercolor Palettes\" for thinning inks and washes I don't want on my wet palette."
+        "Securely holds \"TailaiMei Makeup Brush Color Remover\" tins.",
+        "I also use it to hold \"Jucoan Ceramic Watercolor Palettes\" when I need a dedicated dry palette."
       ],
       "uniqueModels": 2,
       "variants": 2,
@@ -218,7 +215,7 @@
       "highlights": [
         "Magnetic storage risers that add extra height and usable storage to Gridfinity arrays.",
         "Keyed alignment notches add stability when used in multiple orientations.",
-        "Large version is long enough to store extra brushes in."
+        "Large version is long enough to store extra brushes in, short version is good for smaller tools."
       ],
       "uniqueModels": 2,
       "variants": 0,
